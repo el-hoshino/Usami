@@ -10,23 +10,15 @@ import CoreImage
 
 open class CustomCIFilter: CIFilter {
 	
-	open var customFilter: CIFilter? {
-		return nil
-	}
-	
 	public var inputImage: CIImage?
+	
+	open override func setDefaults() {
+		self.inputImage = nil
+	}
 	
 	override open var outputImage: CIImage? {
 		
-		guard let inputImage = self.inputImage else {
-			return nil
-		}
-		
-		guard let filter = self.customFilter else {
-			return inputImage
-		}
-		
-		return filter.outputImage
+		return self.inputImage
 		
 	}
 	

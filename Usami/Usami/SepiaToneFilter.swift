@@ -10,17 +10,30 @@ import CoreImage
 
 public class SepiaToneFilter: CustomCIFilter {
 	
-	public override var customFilter: CIFilter? {
+	private let _sepiaFilter = CIFilter(name: "CISepiaTone")
+	
+	public override func setDefaults() {
+		super.setDefaults()
+		self._sepiaFilter?.setDefaults()
+	}
+	
+	public override var outputImage: CIImage? {
 		
-		guard let filter = CIFilter(name: "CISepiaTone") else {
+		guard let inputImage = self.inputImage else {
 			return nil
 		}
 		
-		filter.setValue(self.inputImage, forKey: kCIInputImageKey)
+		let image: CIImage
+		if let filter = self._sepiaFilter {
+			filter.setValue(self.inputImage, forKey: kCIInputImageKey)
+			image = filter.outputImage ?? inputImage
+			
+		} else {
+			image = inputImage
+		}
 		
-		return filter
+		return image
 		
 	}
 	
 }
-
