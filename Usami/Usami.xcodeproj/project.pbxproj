@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		166F76131DC1C6DE007BD9B7 /* Usami.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 166F76091DC1C6DE007BD9B7 /* Usami.framework */; };
+		166F76181DC1C6DE007BD9B7 /* UsamiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F76171DC1C6DE007BD9B7 /* UsamiTests.swift */; };
+		166F761A1DC1C6DE007BD9B7 /* Usami.h in Headers */ = {isa = PBXBuildFile; fileRef = 166F760C1DC1C6DE007BD9B7 /* Usami.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		166F76141DC1C6DE007BD9B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 166F76001DC1C6DE007BD9B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 166F76081DC1C6DE007BD9B7;
+			remoteInfo = Usami;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		166F76091DC1C6DE007BD9B7 /* Usami.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Usami.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		166F760C1DC1C6DE007BD9B7 /* Usami.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Usami.h; sourceTree = "<group>"; };
+		166F760D1DC1C6DE007BD9B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		166F76121DC1C6DE007BD9B7 /* UsamiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsamiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		166F76171DC1C6DE007BD9B7 /* UsamiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsamiTests.swift; sourceTree = "<group>"; };
+		166F76191DC1C6DE007BD9B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		166F76051DC1C6DE007BD9B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		166F760F1DC1C6DE007BD9B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				166F76131DC1C6DE007BD9B7 /* Usami.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		166F75FF1DC1C6DE007BD9B7 = {
+			isa = PBXGroup;
+			children = (
+				166F760B1DC1C6DE007BD9B7 /* Usami */,
+				166F76161DC1C6DE007BD9B7 /* UsamiTests */,
+				166F760A1DC1C6DE007BD9B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		166F760A1DC1C6DE007BD9B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				166F76091DC1C6DE007BD9B7 /* Usami.framework */,
+				166F76121DC1C6DE007BD9B7 /* UsamiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		166F760B1DC1C6DE007BD9B7 /* Usami */ = {
+			isa = PBXGroup;
+			children = (
+				166F760C1DC1C6DE007BD9B7 /* Usami.h */,
+				166F760D1DC1C6DE007BD9B7 /* Info.plist */,
+			);
+			path = Usami;
+			sourceTree = "<group>";
+		};
+		166F76161DC1C6DE007BD9B7 /* UsamiTests */ = {
+			isa = PBXGroup;
+			children = (
+				166F76171DC1C6DE007BD9B7 /* UsamiTests.swift */,
+				166F76191DC1C6DE007BD9B7 /* Info.plist */,
+			);
+			path = UsamiTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		166F76061DC1C6DE007BD9B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				166F761A1DC1C6DE007BD9B7 /* Usami.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		166F76081DC1C6DE007BD9B7 /* Usami */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 166F761D1DC1C6DE007BD9B7 /* Build configuration list for PBXNativeTarget "Usami" */;
+			buildPhases = (
+				166F76041DC1C6DE007BD9B7 /* Sources */,
+				166F76051DC1C6DE007BD9B7 /* Frameworks */,
+				166F76061DC1C6DE007BD9B7 /* Headers */,
+				166F76071DC1C6DE007BD9B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Usami;
+			productName = Usami;
+			productReference = 166F76091DC1C6DE007BD9B7 /* Usami.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		166F76111DC1C6DE007BD9B7 /* UsamiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 166F76201DC1C6DE007BD9B7 /* Build configuration list for PBXNativeTarget "UsamiTests" */;
+			buildPhases = (
+				166F760E1DC1C6DE007BD9B7 /* Sources */,
+				166F760F1DC1C6DE007BD9B7 /* Frameworks */,
+				166F76101DC1C6DE007BD9B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				166F76151DC1C6DE007BD9B7 /* PBXTargetDependency */,
+			);
+			name = UsamiTests;
+			productName = UsamiTests;
+			productReference = 166F76121DC1C6DE007BD9B7 /* UsamiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		166F76001DC1C6DE007BD9B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = net.crazism;
+				TargetAttributes = {
+					166F76081DC1C6DE007BD9B7 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = KC8N9BMQJY;
+						ProvisioningStyle = Automatic;
+					};
+					166F76111DC1C6DE007BD9B7 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = KC8N9BMQJY;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 166F76031DC1C6DE007BD9B7 /* Build configuration list for PBXProject "Usami" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 166F75FF1DC1C6DE007BD9B7;
+			productRefGroup = 166F760A1DC1C6DE007BD9B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				166F76081DC1C6DE007BD9B7 /* Usami */,
+				166F76111DC1C6DE007BD9B7 /* UsamiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		166F76071DC1C6DE007BD9B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		166F76101DC1C6DE007BD9B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		166F76041DC1C6DE007BD9B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		166F760E1DC1C6DE007BD9B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				166F76181DC1C6DE007BD9B7 /* UsamiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		166F76151DC1C6DE007BD9B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 166F76081DC1C6DE007BD9B7 /* Usami */;
+			targetProxy = 166F76141DC1C6DE007BD9B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		166F761B1DC1C6DE007BD9B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		166F761C1DC1C6DE007BD9B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		166F761E1DC1C6DE007BD9B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KC8N9BMQJY;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Usami/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.Usami;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		166F761F1DC1C6DE007BD9B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KC8N9BMQJY;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Usami/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.Usami;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		166F76211DC1C6DE007BD9B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = KC8N9BMQJY;
+				INFOPLIST_FILE = UsamiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.UsamiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		166F76221DC1C6DE007BD9B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = KC8N9BMQJY;
+				INFOPLIST_FILE = UsamiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.UsamiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		166F76031DC1C6DE007BD9B7 /* Build configuration list for PBXProject "Usami" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				166F761B1DC1C6DE007BD9B7 /* Debug */,
+				166F761C1DC1C6DE007BD9B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		166F761D1DC1C6DE007BD9B7 /* Build configuration list for PBXNativeTarget "Usami" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				166F761E1DC1C6DE007BD9B7 /* Debug */,
+				166F761F1DC1C6DE007BD9B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		166F76201DC1C6DE007BD9B7 /* Build configuration list for PBXNativeTarget "UsamiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				166F76211DC1C6DE007BD9B7 /* Debug */,
+				166F76221DC1C6DE007BD9B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 166F76001DC1C6DE007BD9B7 /* Project object */;
+}
