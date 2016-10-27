@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7A150E04A2C70DF8AC2823E52952D83D8E3D62AE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7A150E04A2C70DF8AC2823E52952D83D8E3D62AE" : 9223372036854775807,
+    "75601FD81BC6ADF58A45D5078CDBC5FAEBCCE86E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "049CB86D-0700-4C9B-89C0-FCC0C7D358FA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7A150E04A2C70DF8AC2823E52952D83D8E3D62AE" : "Usami\/",
+    "75601FD81BC6ADF58A45D5078CDBC5FAEBCCE86E" : "Eltaso\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Usami",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Usami\/Usami.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/el-hoshino\/Eltaso.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "75601FD81BC6ADF58A45D5078CDBC5FAEBCCE86E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/el-hoshino\/Usami.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7A150E04A2C70DF8AC2823E52952D83D8E3D62AE"
+    }
+  ]
+}
