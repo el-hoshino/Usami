@@ -12,6 +12,8 @@
 		166F761A1DC1C6DE007BD9B7 /* Usami.h in Headers */ = {isa = PBXBuildFile; fileRef = 166F760C1DC1C6DE007BD9B7 /* Usami.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		166F76781DC1CD50007BD9B7 /* CIFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F76771DC1CD50007BD9B7 /* CIFilter.swift */; };
 		166F767A1DC1CD7A007BD9B7 /* CustomFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F76791DC1CD7A007BD9B7 /* CustomFilter.swift */; };
+		166F767C1DC1CE5D007BD9B7 /* SepiaToneFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F767B1DC1CE5D007BD9B7 /* SepiaToneFilter.swift */; };
+		166F767E1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F767D1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		166F76191DC1C6DE007BD9B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		166F76771DC1CD50007BD9B7 /* CIFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIFilter.swift; sourceTree = "<group>"; };
 		166F76791DC1CD7A007BD9B7 /* CustomFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFilter.swift; sourceTree = "<group>"; };
+		166F767B1DC1CE5D007BD9B7 /* SepiaToneFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SepiaToneFilter.swift; sourceTree = "<group>"; };
+		166F767D1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaussianBlurFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 				166F760D1DC1C6DE007BD9B7 /* Info.plist */,
 				166F76771DC1CD50007BD9B7 /* CIFilter.swift */,
 				166F76791DC1CD7A007BD9B7 /* CustomFilter.swift */,
+				166F767B1DC1CE5D007BD9B7 /* SepiaToneFilter.swift */,
+				166F767D1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift */,
 			);
 			path = Usami;
 			sourceTree = "<group>";
@@ -206,6 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				166F767A1DC1CD7A007BD9B7 /* CustomFilter.swift in Sources */,
+				166F767E1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift in Sources */,
+				166F767C1DC1CE5D007BD9B7 /* SepiaToneFilter.swift in Sources */,
 				166F76781DC1CD50007BD9B7 /* CIFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
