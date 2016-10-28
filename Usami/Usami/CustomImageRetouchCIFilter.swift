@@ -1,5 +1,5 @@
 //
-//  CustomFilter.swift
+//  CustomImageRetouchCIFilter.swift
 //  Usami
 //
 //  Created by 史　翔新 on 2016/10/27.
