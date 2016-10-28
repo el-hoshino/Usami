@@ -8,7 +8,7 @@
 
 import CoreImage
 
-public class GaussianBlurFilter: CustomCIFilter {
+public class GaussianBlurFilter: CustomImageRetouchCIFilter {
 	
 	private let _affineClampFilter = CIFilter(name: "CIAffineClamp")
 	private let _gaussianBlurFilter = CIFilter(name: "CIGaussianBlur")

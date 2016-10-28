@@ -8,7 +8,7 @@
 
 import CoreImage
 
-public class SepiaToneFilter: CustomCIFilter {
+public class SepiaToneFilter: CustomImageRetouchCIFilter {
 	
 	private let _sepiaFilter = CIFilter(name: "CISepiaTone")
 	

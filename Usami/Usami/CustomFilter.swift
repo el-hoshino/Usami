@@ -8,11 +8,12 @@
 
 import CoreImage
 
-open class CustomCIFilter: CIFilter {
+open class CustomImageRetouchCIFilter: CIFilter {
 	
 	public var inputImage: CIImage?
 	
 	open override func setDefaults() {
+		super.setDefaults()
 		self.inputImage = nil
 	}
 	
