@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		16470A551DC35B8E00EF0E77 /* ColorControlsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */; };
 		16470A6A1DC364C200EF0E77 /* Eltaso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16470A671DC364BC00EF0E77 /* Eltaso.framework */; };
+		16470A761DC6F70700EF0E77 /* CIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A751DC6F70700EF0E77 /* CIColor.swift */; };
 		166882631DC353EA00C67F0C /* LinearDodgeBlendFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166882621DC353EA00C67F0C /* LinearDodgeBlendFilter.swift */; };
 		166882691DC3549B00C67F0C /* CIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166882681DC3549B00C67F0C /* CIImage.swift */; };
 		166F76131DC1C6DE007BD9B7 /* Usami.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 166F76091DC1C6DE007BD9B7 /* Usami.framework */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorControlsFilter.swift; sourceTree = "<group>"; };
 		16470A611DC364BC00EF0E77 /* Eltaso.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eltaso.xcodeproj; path = "/Users/shi_xiangxin/Documents/MAGES./作品/AfiliaCamera/../Eltaso/Eltaso/Eltaso.xcodeproj"; sourceTree = "<absolute>"; };
+		16470A751DC6F70700EF0E77 /* CIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIColor.swift; sourceTree = "<group>"; };
 		166882621DC353EA00C67F0C /* LinearDodgeBlendFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearDodgeBlendFilter.swift; sourceTree = "<group>"; };
 		166882681DC3549B00C67F0C /* CIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIImage.swift; sourceTree = "<group>"; };
 		166F76091DC1C6DE007BD9B7 /* Usami.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Usami.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 				166F760C1DC1C6DE007BD9B7 /* Usami.h */,
 				166F760D1DC1C6DE007BD9B7 /* Info.plist */,
 				166882681DC3549B00C67F0C /* CIImage.swift */,
+				16470A751DC6F70700EF0E77 /* CIColor.swift */,
 				166F76771DC1CD50007BD9B7 /* CIFilter.swift */,
 				166F768F1DC1D747007BD9B7 /* CIContext.swift */,
 				166F76791DC1CD7A007BD9B7 /* CustomImageRetouchCIFilter.swift */,
@@ -278,6 +281,7 @@
 				166F767A1DC1CD7A007BD9B7 /* CustomImageRetouchCIFilter.swift in Sources */,
 				166F767E1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift in Sources */,
 				166F767C1DC1CE5D007BD9B7 /* SepiaToneFilter.swift in Sources */,
+				16470A761DC6F70700EF0E77 /* CIColor.swift in Sources */,
 				16470A551DC35B8E00EF0E77 /* ColorControlsFilter.swift in Sources */,
 				166882691DC3549B00C67F0C /* CIImage.swift in Sources */,
 				166F76781DC1CD50007BD9B7 /* CIFilter.swift in Sources */,
