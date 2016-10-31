@@ -1,5 +1,5 @@
 //
-//  CustomFilter.swift
+//  CustomImageRetouchCIFilter.swift
 //  Usami
 //
 //  Created by 史　翔新 on 2016/10/27.
@@ -8,11 +8,12 @@
 
 import CoreImage
 
-open class CustomCIFilter: CIFilter {
+open class CustomImageRetouchCIFilter: CIFilter {
 	
 	public var inputImage: CIImage?
 	
 	open override func setDefaults() {
+		super.setDefaults()
 		self.inputImage = nil
 	}
 	

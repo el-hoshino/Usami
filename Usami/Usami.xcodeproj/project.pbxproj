@@ -7,17 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16470A551DC35B8E00EF0E77 /* ColorControlsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */; };
+		16470A6A1DC364C200EF0E77 /* Eltaso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16470A671DC364BC00EF0E77 /* Eltaso.framework */; };
+		16470A6C1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */; };
+		16470A721DC6EEAC00EF0E77 /* MaskedBlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A711DC6EEAC00EF0E77 /* MaskedBlurFilter.swift */; };
+		16470A761DC6F70700EF0E77 /* CIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A751DC6F70700EF0E77 /* CIColor.swift */; };
+		166882631DC353EA00C67F0C /* LinearDodgeBlendFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166882621DC353EA00C67F0C /* LinearDodgeBlendFilter.swift */; };
+		166882691DC3549B00C67F0C /* CIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166882681DC3549B00C67F0C /* CIImage.swift */; };
 		166F76131DC1C6DE007BD9B7 /* Usami.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 166F76091DC1C6DE007BD9B7 /* Usami.framework */; };
 		166F76181DC1C6DE007BD9B7 /* UsamiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F76171DC1C6DE007BD9B7 /* UsamiTests.swift */; };
 		166F761A1DC1C6DE007BD9B7 /* Usami.h in Headers */ = {isa = PBXBuildFile; fileRef = 166F760C1DC1C6DE007BD9B7 /* Usami.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		166F76781DC1CD50007BD9B7 /* CIFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F76771DC1CD50007BD9B7 /* CIFilter.swift */; };
-		166F767A1DC1CD7A007BD9B7 /* CustomFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F76791DC1CD7A007BD9B7 /* CustomFilter.swift */; };
+		166F767A1DC1CD7A007BD9B7 /* CustomImageRetouchCIFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F76791DC1CD7A007BD9B7 /* CustomImageRetouchCIFilter.swift */; };
 		166F767C1DC1CE5D007BD9B7 /* SepiaToneFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F767B1DC1CE5D007BD9B7 /* SepiaToneFilter.swift */; };
 		166F767E1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F767D1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift */; };
 		166F76901DC1D747007BD9B7 /* CIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F768F1DC1D747007BD9B7 /* CIContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		16470A661DC364BC00EF0E77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16470A611DC364BC00EF0E77 /* Eltaso.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 79E14E821D2B90DA00AF6EE4;
+			remoteInfo = Eltaso;
+		};
+		16470A681DC364BC00EF0E77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16470A611DC364BC00EF0E77 /* Eltaso.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 79E14E8C1D2B90DA00AF6EE4;
+			remoteInfo = EltasoTests;
+		};
 		166F76141DC1C6DE007BD9B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 166F76001DC1C6DE007BD9B7 /* Project object */;
@@ -28,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorControlsFilter.swift; sourceTree = "<group>"; };
+		16470A611DC364BC00EF0E77 /* Eltaso.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eltaso.xcodeproj; path = "/Users/shi_xiangxin/Documents/MAGES./作品/AfiliaCamera/../Eltaso/Eltaso/Eltaso.xcodeproj"; sourceTree = "<absolute>"; };
+		16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplyCompositingFilter.swift; sourceTree = "<group>"; };
+		16470A711DC6EEAC00EF0E77 /* MaskedBlurFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskedBlurFilter.swift; sourceTree = "<group>"; };
+		16470A751DC6F70700EF0E77 /* CIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIColor.swift; sourceTree = "<group>"; };
+		166882621DC353EA00C67F0C /* LinearDodgeBlendFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearDodgeBlendFilter.swift; sourceTree = "<group>"; };
+		166882681DC3549B00C67F0C /* CIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIImage.swift; sourceTree = "<group>"; };
 		166F76091DC1C6DE007BD9B7 /* Usami.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Usami.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		166F760C1DC1C6DE007BD9B7 /* Usami.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Usami.h; sourceTree = "<group>"; };
 		166F760D1DC1C6DE007BD9B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,7 +63,7 @@
 		166F76171DC1C6DE007BD9B7 /* UsamiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsamiTests.swift; sourceTree = "<group>"; };
 		166F76191DC1C6DE007BD9B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		166F76771DC1CD50007BD9B7 /* CIFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIFilter.swift; sourceTree = "<group>"; };
-		166F76791DC1CD7A007BD9B7 /* CustomFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFilter.swift; sourceTree = "<group>"; };
+		166F76791DC1CD7A007BD9B7 /* CustomImageRetouchCIFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageRetouchCIFilter.swift; sourceTree = "<group>"; };
 		166F767B1DC1CE5D007BD9B7 /* SepiaToneFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SepiaToneFilter.swift; sourceTree = "<group>"; };
 		166F767D1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaussianBlurFilter.swift; sourceTree = "<group>"; };
 		166F768F1DC1D747007BD9B7 /* CIContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIContext.swift; sourceTree = "<group>"; };
@@ -46,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16470A6A1DC364C200EF0E77 /* Eltaso.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +89,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16470A621DC364BC00EF0E77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16470A671DC364BC00EF0E77 /* Eltaso.framework */,
+				16470A691DC364BC00EF0E77 /* EltasoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		166F75FF1DC1C6DE007BD9B7 = {
 			isa = PBXGroup;
 			children = (
+				16470A611DC364BC00EF0E77 /* Eltaso.xcodeproj */,
 				166F760B1DC1C6DE007BD9B7 /* Usami */,
 				166F76161DC1C6DE007BD9B7 /* UsamiTests */,
 				166F760A1DC1C6DE007BD9B7 /* Products */,
@@ -83,11 +122,17 @@
 			children = (
 				166F760C1DC1C6DE007BD9B7 /* Usami.h */,
 				166F760D1DC1C6DE007BD9B7 /* Info.plist */,
+				166882681DC3549B00C67F0C /* CIImage.swift */,
+				16470A751DC6F70700EF0E77 /* CIColor.swift */,
 				166F76771DC1CD50007BD9B7 /* CIFilter.swift */,
 				166F768F1DC1D747007BD9B7 /* CIContext.swift */,
-				166F76791DC1CD7A007BD9B7 /* CustomFilter.swift */,
+				166F76791DC1CD7A007BD9B7 /* CustomImageRetouchCIFilter.swift */,
+				16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */,
+				16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */,
+				166882621DC353EA00C67F0C /* LinearDodgeBlendFilter.swift */,
 				166F767B1DC1CE5D007BD9B7 /* SepiaToneFilter.swift */,
 				166F767D1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift */,
+				16470A711DC6EEAC00EF0E77 /* MaskedBlurFilter.swift */,
 			);
 			path = Usami;
 			sourceTree = "<group>";
@@ -184,6 +229,12 @@
 			mainGroup = 166F75FF1DC1C6DE007BD9B7;
 			productRefGroup = 166F760A1DC1C6DE007BD9B7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 16470A621DC364BC00EF0E77 /* Products */;
+					ProjectRef = 16470A611DC364BC00EF0E77 /* Eltaso.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				166F76081DC1C6DE007BD9B7 /* Usami */,
@@ -191,6 +242,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		16470A671DC364BC00EF0E77 /* Eltaso.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Eltaso.framework;
+			remoteRef = 16470A661DC364BC00EF0E77 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		16470A691DC364BC00EF0E77 /* EltasoTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EltasoTests.xctest;
+			remoteRef = 16470A681DC364BC00EF0E77 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		166F76071DC1C6DE007BD9B7 /* Resources */ = {
@@ -214,11 +282,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				166882631DC353EA00C67F0C /* LinearDodgeBlendFilter.swift in Sources */,
 				166F76901DC1D747007BD9B7 /* CIContext.swift in Sources */,
-				166F767A1DC1CD7A007BD9B7 /* CustomFilter.swift in Sources */,
+				166F767A1DC1CD7A007BD9B7 /* CustomImageRetouchCIFilter.swift in Sources */,
+				16470A721DC6EEAC00EF0E77 /* MaskedBlurFilter.swift in Sources */,
 				166F767E1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift in Sources */,
 				166F767C1DC1CE5D007BD9B7 /* SepiaToneFilter.swift in Sources */,
+				16470A761DC6F70700EF0E77 /* CIColor.swift in Sources */,
+				16470A551DC35B8E00EF0E77 /* ColorControlsFilter.swift in Sources */,
+				166882691DC3549B00C67F0C /* CIImage.swift in Sources */,
 				166F76781DC1CD50007BD9B7 /* CIFilter.swift in Sources */,
+				16470A6C1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
