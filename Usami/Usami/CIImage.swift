@@ -23,4 +23,22 @@ extension CIImage {
 		
 	}
 	
+	public static func createRadialGradientImageWithExtent(_ extent: CGRect, circleCenter: CGPoint, innerRadius: CGFloat, innerColor: CIColor, outerRadius: CGFloat, outerColor: CIColor) -> CIImage? {
+		
+		guard let generator = CIFilter(name: "CIRadialGradient") else {
+			return nil
+		}
+		
+		let centerVector = CIVector(cgPoint: circleCenter)
+		generator.setValue(centerVector, forKey: kCIInputCenterKey)
+		generator.setValue(innerRadius, forKey: "inputRadius0")
+		generator.setValue(outerRadius, forKey: "inputRadius1")
+		generator.setValue(innerColor, forKey: "inputColor0")
+		generator.setValue(outerColor, forKey: "inputColor1")
+		let croppedImage = generator.outputImage?.cropping(to: extent)
+		
+		return croppedImage
+		
+	}
+	
 }
