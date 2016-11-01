@@ -1,8 +1,14 @@
 //: Playground - noun: a place where people can play
 
-import UIKit
+import PlaygroundSupport
 import Usami
 
-var str = "Hello, playground"
+let view = PreviewView(frame: CGRect(x: 0, y: 0, width: 720, height: 360))
+PlaygroundPage.current.liveView = view
 
-let filter = SepiaToneFilter()
+let baseImage = #imageLiteral(resourceName: "lena.png")
+view.imageA = baseImage
+
+let gaussianBlurFilter = GaussianBlurFilter()
+let filteredImage = gaussianBlurFilter.getFilteredImage(from: baseImage)
+view.imageB = filteredImage
