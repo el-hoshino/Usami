@@ -22,6 +22,7 @@
 		166F767C1DC1CE5D007BD9B7 /* SepiaToneFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F767B1DC1CE5D007BD9B7 /* SepiaToneFilter.swift */; };
 		166F767E1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F767D1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift */; };
 		166F76901DC1D747007BD9B7 /* CIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F768F1DC1D747007BD9B7 /* CIContext.swift */; };
+		16ABF4131DCC939600DE3CED /* ScreenBlendFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4121DCC939600DE3CED /* ScreenBlendFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		166F767B1DC1CE5D007BD9B7 /* SepiaToneFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SepiaToneFilter.swift; sourceTree = "<group>"; };
 		166F767D1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaussianBlurFilter.swift; sourceTree = "<group>"; };
 		166F768F1DC1D747007BD9B7 /* CIContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIContext.swift; sourceTree = "<group>"; };
+		16ABF4121DCC939600DE3CED /* ScreenBlendFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenBlendFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */,
 				16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */,
 				166882621DC353EA00C67F0C /* LinearDodgeBlendFilter.swift */,
+				16ABF4121DCC939600DE3CED /* ScreenBlendFilter.swift */,
 				166F767B1DC1CE5D007BD9B7 /* SepiaToneFilter.swift */,
 				166F767D1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift */,
 				16470A711DC6EEAC00EF0E77 /* MaskedBlurFilter.swift */,
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				166882631DC353EA00C67F0C /* LinearDodgeBlendFilter.swift in Sources */,
+				16ABF4131DCC939600DE3CED /* ScreenBlendFilter.swift in Sources */,
 				166F76901DC1D747007BD9B7 /* CIContext.swift in Sources */,
 				166F767A1DC1CD7A007BD9B7 /* CustomImageRetouchCIFilter.swift in Sources */,
 				16470A721DC6EEAC00EF0E77 /* MaskedBlurFilter.swift in Sources */,
