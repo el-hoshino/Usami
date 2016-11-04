@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		162478701DCCAF410056B373 /* OverlayBlendFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1624786F1DCCAF410056B373 /* OverlayBlendFilter.swift */; };
+		162478761DCCB26F0056B373 /* ColorDodgeBlendFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162478751DCCB26F0056B373 /* ColorDodgeBlendFilter.swift */; };
 		16470A551DC35B8E00EF0E77 /* ColorControlsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */; };
 		16470A6A1DC364C200EF0E77 /* Eltaso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16470A671DC364BC00EF0E77 /* Eltaso.framework */; };
 		16470A6C1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		1624786F1DCCAF410056B373 /* OverlayBlendFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayBlendFilter.swift; sourceTree = "<group>"; };
+		162478751DCCB26F0056B373 /* ColorDodgeBlendFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDodgeBlendFilter.swift; sourceTree = "<group>"; };
 		16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorControlsFilter.swift; sourceTree = "<group>"; };
 		16470A611DC364BC00EF0E77 /* Eltaso.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eltaso.xcodeproj; path = "/Users/shi_xiangxin/Documents/MAGES./作品/AfiliaCamera/../Eltaso/Eltaso/Eltaso.xcodeproj"; sourceTree = "<absolute>"; };
 		16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplyCompositingFilter.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */,
 				16ABF4161DCC97CF00DE3CED /* SourceOverCompositingFilter.swift */,
 				1624786F1DCCAF410056B373 /* OverlayBlendFilter.swift */,
+				162478751DCCB26F0056B373 /* ColorDodgeBlendFilter.swift */,
 				166882621DC353EA00C67F0C /* LinearDodgeBlendFilter.swift */,
 				16ABF4121DCC939600DE3CED /* ScreenBlendFilter.swift */,
 				166F767B1DC1CE5D007BD9B7 /* SepiaToneFilter.swift */,
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				162478761DCCB26F0056B373 /* ColorDodgeBlendFilter.swift in Sources */,
 				162478701DCCAF410056B373 /* OverlayBlendFilter.swift in Sources */,
 				166882631DC353EA00C67F0C /* LinearDodgeBlendFilter.swift in Sources */,
 				16ABF4131DCC939600DE3CED /* ScreenBlendFilter.swift in Sources */,
