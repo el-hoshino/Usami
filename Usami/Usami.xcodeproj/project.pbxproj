@@ -23,6 +23,7 @@
 		166F767E1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F767D1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift */; };
 		166F76901DC1D747007BD9B7 /* CIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F768F1DC1D747007BD9B7 /* CIContext.swift */; };
 		16ABF4131DCC939600DE3CED /* ScreenBlendFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4121DCC939600DE3CED /* ScreenBlendFilter.swift */; };
+		16ABF4171DCC97CF00DE3CED /* SourceOverCompositingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4161DCC97CF00DE3CED /* SourceOverCompositingFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		166F767D1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaussianBlurFilter.swift; sourceTree = "<group>"; };
 		166F768F1DC1D747007BD9B7 /* CIContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIContext.swift; sourceTree = "<group>"; };
 		16ABF4121DCC939600DE3CED /* ScreenBlendFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenBlendFilter.swift; sourceTree = "<group>"; };
+		16ABF4161DCC97CF00DE3CED /* SourceOverCompositingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceOverCompositingFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				166F76791DC1CD7A007BD9B7 /* CustomImageRetouchCIFilter.swift */,
 				16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */,
 				16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */,
+				16ABF4161DCC97CF00DE3CED /* SourceOverCompositingFilter.swift */,
 				166882621DC353EA00C67F0C /* LinearDodgeBlendFilter.swift */,
 				16ABF4121DCC939600DE3CED /* ScreenBlendFilter.swift */,
 				166F767B1DC1CE5D007BD9B7 /* SepiaToneFilter.swift */,
@@ -296,6 +299,7 @@
 				16470A551DC35B8E00EF0E77 /* ColorControlsFilter.swift in Sources */,
 				166882691DC3549B00C67F0C /* CIImage.swift in Sources */,
 				166F76781DC1CD50007BD9B7 /* CIFilter.swift in Sources */,
+				16ABF4171DCC97CF00DE3CED /* SourceOverCompositingFilter.swift in Sources */,
 				16470A6C1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
