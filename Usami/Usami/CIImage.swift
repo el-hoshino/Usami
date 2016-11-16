@@ -38,6 +38,33 @@ extension CIImage {
 		
 		return generatedImage
 		
+	}
+	
+}
+
+extension CIImage {
+	
+	public func translating(by translation: CGPoint) -> CIImage {
+		
+		let transform = CGAffineTransform(translationX: translation.x, y: translation.y)
+		let transformedImage = self.applying(transform)
+		return transformedImage
+		
+	}
+	
+	public func scaling(by scale: CGScale) -> CIImage {
+		
+		let transform = CGAffineTransform(scaleX: scale.horizontal, y: scale.vertical)
+		let transformedImage = self.applying(transform)
+		return transformedImage
+		
+	}
+	
+	public func rotating(by angle: CGFloat) -> CIImage {
+		
+		let transform = CGAffineTransform(rotationAngle: angle)
+		let transformedImage = self.applying(transform)
+		return transformedImage
 		
 	}
 	
