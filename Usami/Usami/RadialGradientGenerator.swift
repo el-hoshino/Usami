@@ -8,7 +8,7 @@
 
 import CoreImage
 
-class RadialGradientGenerator: CIFilter {
+public class RadialGradientGenerator: CIFilter {
 	
 	private let _generator = CIFilter(name: "CIRadialGradient")
 	
@@ -19,7 +19,7 @@ class RadialGradientGenerator: CIFilter {
 	public var outerRadius: CGFloat = 0
 	public var outerColor: CIColor = CIColor(red: 0, green: 0, blue: 0, alpha: 0)
 	
-	override func setDefaults() {
+	override public func setDefaults() {
 		super.setDefaults()
 		self._generator?.setDefaults()
 		self.extent = nil
@@ -30,7 +30,7 @@ class RadialGradientGenerator: CIFilter {
 		self.outerColor = CIColor(red: 0, green: 0, blue: 0, alpha: 0)
 	}
 	
-	override var outputImage: CIImage? {
+	override public var outputImage: CIImage? {
 		
 		guard let generator = self._generator else {
 			return nil
