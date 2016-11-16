@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		162478701DCCAF410056B373 /* OverlayBlendFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1624786F1DCCAF410056B373 /* OverlayBlendFilter.swift */; };
 		162478761DCCB26F0056B373 /* ColorDodgeBlendFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162478751DCCB26F0056B373 /* ColorDodgeBlendFilter.swift */; };
+		163405BF1DDC53E5003BEF8E /* RadialGradientGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163405BE1DDC53E5003BEF8E /* RadialGradientGenerator.swift */; };
 		16470A551DC35B8E00EF0E77 /* ColorControlsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */; };
 		16470A6A1DC364C200EF0E77 /* Eltaso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16470A671DC364BC00EF0E77 /* Eltaso.framework */; };
 		16470A6C1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		1624786F1DCCAF410056B373 /* OverlayBlendFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayBlendFilter.swift; sourceTree = "<group>"; };
 		162478751DCCB26F0056B373 /* ColorDodgeBlendFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDodgeBlendFilter.swift; sourceTree = "<group>"; };
+		163405BE1DDC53E5003BEF8E /* RadialGradientGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGradientGenerator.swift; sourceTree = "<group>"; };
 		16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorControlsFilter.swift; sourceTree = "<group>"; };
 		16470A611DC364BC00EF0E77 /* Eltaso.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eltaso.xcodeproj; path = "/Users/shi_xiangxin/Documents/MAGES./作品/AfiliaCamera/../Eltaso/Eltaso/Eltaso.xcodeproj"; sourceTree = "<absolute>"; };
 		16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplyCompositingFilter.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				16470A751DC6F70700EF0E77 /* CIColor.swift */,
 				166F76771DC1CD50007BD9B7 /* CIFilter.swift */,
 				166F768F1DC1D747007BD9B7 /* CIContext.swift */,
+				163405BE1DDC53E5003BEF8E /* RadialGradientGenerator.swift */,
 				166F76791DC1CD7A007BD9B7 /* CustomImageRetouchCIFilter.swift */,
 				16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */,
 				16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */,
@@ -304,6 +307,7 @@
 				166F767E1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift in Sources */,
 				166F767C1DC1CE5D007BD9B7 /* SepiaToneFilter.swift in Sources */,
 				16470A761DC6F70700EF0E77 /* CIColor.swift in Sources */,
+				163405BF1DDC53E5003BEF8E /* RadialGradientGenerator.swift in Sources */,
 				16470A551DC35B8E00EF0E77 /* ColorControlsFilter.swift in Sources */,
 				166882691DC3549B00C67F0C /* CIImage.swift in Sources */,
 				166F76781DC1CD50007BD9B7 /* CIFilter.swift in Sources */,
