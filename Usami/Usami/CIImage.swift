@@ -7,6 +7,7 @@
 //
 
 import CoreImage
+import Eltaso
 
 extension CIImage {
 	
@@ -25,19 +26,45 @@ extension CIImage {
 	
 	public static func createRadialGradientImageWithExtent(_ extent: CGRect, circleCenter: CGPoint, innerRadius: CGFloat, innerColor: CIColor, outerRadius: CGFloat, outerColor: CIColor) -> CIImage? {
 		
-		guard let generator = CIFilter(name: "CIRadialGradient") else {
-			return nil
-		}
+		let generator = RadialGradientGenerator()
 		
-		let centerVector = CIVector(cgPoint: circleCenter)
-		generator.setValue(centerVector, forKey: kCIInputCenterKey)
-		generator.setValue(innerRadius, forKey: "inputRadius0")
-		generator.setValue(outerRadius, forKey: "inputRadius1")
-		generator.setValue(innerColor, forKey: "inputColor0")
-		generator.setValue(outerColor, forKey: "inputColor1")
-		let croppedImage = generator.outputImage?.cropping(to: extent)
+		generator.extent = extent
+		generator.radialCenter = CIVector(cgPoint: circleCenter)
+		generator.innerRadius = innerRadius
+		generator.innerColor = innerColor
+		generator.outerRadius = outerRadius
+		generator.outerColor = outerColor
+		let generatedImage = generator.outputImage
 		
-		return croppedImage
+		return generatedImage
+		
+	}
+	
+}
+
+extension CIImage {
+	
+	public func translating(by translation: CGPoint) -> CIImage {
+		
+		let transform = CGAffineTransform(translationX: translation.x, y: translation.y)
+		let transformedImage = self.applying(transform)
+		return transformedImage
+		
+	}
+	
+	public func scaling(by scale: CGScale) -> CIImage {
+		
+		let transform = CGAffineTransform(scaleX: scale.horizontal, y: scale.vertical)
+		let transformedImage = self.applying(transform)
+		return transformedImage
+		
+	}
+	
+	public func rotating(by angle: CGFloat) -> CIImage {
+		
+		let transform = CGAffineTransform(rotationAngle: angle)
+		let transformedImage = self.applying(transform)
+		return transformedImage
 		
 	}
 	
