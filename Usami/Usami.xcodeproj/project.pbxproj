@@ -15,6 +15,8 @@
 		16470A6C1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */; };
 		16470A721DC6EEAC00EF0E77 /* MaskedBlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A711DC6EEAC00EF0E77 /* MaskedBlurFilter.swift */; };
 		16470A761DC6F70700EF0E77 /* CIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A751DC6F70700EF0E77 /* CIColor.swift */; };
+		164866AC1DDDAD36001B067E /* SmoothLinearGradientGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164866AB1DDDAD36001B067E /* SmoothLinearGradientGenerator.swift */; };
+		164866B01DDDB1AF001B067E /* ClippingMaskInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164866AF1DDDB1AF001B067E /* ClippingMaskInterpolator.swift */; };
 		166882631DC353EA00C67F0C /* LinearDodgeBlendFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166882621DC353EA00C67F0C /* LinearDodgeBlendFilter.swift */; };
 		166882691DC3549B00C67F0C /* CIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166882681DC3549B00C67F0C /* CIImage.swift */; };
 		166F76131DC1C6DE007BD9B7 /* Usami.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 166F76091DC1C6DE007BD9B7 /* Usami.framework */; };
@@ -62,6 +64,8 @@
 		16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplyCompositingFilter.swift; sourceTree = "<group>"; };
 		16470A711DC6EEAC00EF0E77 /* MaskedBlurFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskedBlurFilter.swift; sourceTree = "<group>"; };
 		16470A751DC6F70700EF0E77 /* CIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIColor.swift; sourceTree = "<group>"; };
+		164866AB1DDDAD36001B067E /* SmoothLinearGradientGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmoothLinearGradientGenerator.swift; sourceTree = "<group>"; };
+		164866AF1DDDB1AF001B067E /* ClippingMaskInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClippingMaskInterpolator.swift; sourceTree = "<group>"; };
 		166882621DC353EA00C67F0C /* LinearDodgeBlendFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearDodgeBlendFilter.swift; sourceTree = "<group>"; };
 		166882681DC3549B00C67F0C /* CIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIImage.swift; sourceTree = "<group>"; };
 		166F76091DC1C6DE007BD9B7 /* Usami.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Usami.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +141,8 @@
 				166F76771DC1CD50007BD9B7 /* CIFilter.swift */,
 				166F768F1DC1D747007BD9B7 /* CIContext.swift */,
 				163405BE1DDC53E5003BEF8E /* RadialGradientGenerator.swift */,
+				164866AB1DDDAD36001B067E /* SmoothLinearGradientGenerator.swift */,
+				164866AF1DDDB1AF001B067E /* ClippingMaskInterpolator.swift */,
 				166F76791DC1CD7A007BD9B7 /* CustomImageRetouchCIFilter.swift */,
 				16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */,
 				16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */,
@@ -307,6 +313,8 @@
 				166F767E1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift in Sources */,
 				166F767C1DC1CE5D007BD9B7 /* SepiaToneFilter.swift in Sources */,
 				16470A761DC6F70700EF0E77 /* CIColor.swift in Sources */,
+				164866B01DDDB1AF001B067E /* ClippingMaskInterpolator.swift in Sources */,
+				164866AC1DDDAD36001B067E /* SmoothLinearGradientGenerator.swift in Sources */,
 				163405BF1DDC53E5003BEF8E /* RadialGradientGenerator.swift in Sources */,
 				16470A551DC35B8E00EF0E77 /* ColorControlsFilter.swift in Sources */,
 				166882691DC3549B00C67F0C /* CIImage.swift in Sources */,
