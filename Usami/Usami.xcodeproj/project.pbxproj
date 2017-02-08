@@ -29,6 +29,7 @@
 		166F76901DC1D747007BD9B7 /* CIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F768F1DC1D747007BD9B7 /* CIContext.swift */; };
 		16ABF4131DCC939600DE3CED /* ScreenBlendFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4121DCC939600DE3CED /* ScreenBlendFilter.swift */; };
 		16ABF4171DCC97CF00DE3CED /* SourceOverCompositingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4161DCC97CF00DE3CED /* SourceOverCompositingFilter.swift */; };
+		16CABF361E4AB9C500A723C2 /* CIVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CABF351E4AB9C500A723C2 /* CIVector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		166F768F1DC1D747007BD9B7 /* CIContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIContext.swift; sourceTree = "<group>"; };
 		16ABF4121DCC939600DE3CED /* ScreenBlendFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenBlendFilter.swift; sourceTree = "<group>"; };
 		16ABF4161DCC97CF00DE3CED /* SourceOverCompositingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceOverCompositingFilter.swift; sourceTree = "<group>"; };
+		16CABF351E4AB9C500A723C2 /* CIVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIVector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				166F760C1DC1C6DE007BD9B7 /* Usami.h */,
 				166F760D1DC1C6DE007BD9B7 /* Info.plist */,
+				16CABF351E4AB9C500A723C2 /* CIVector.swift */,
 				166882681DC3549B00C67F0C /* CIImage.swift */,
 				16470A751DC6F70700EF0E77 /* CIColor.swift */,
 				166F76771DC1CD50007BD9B7 /* CIFilter.swift */,
@@ -224,7 +227,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = net.crazism;
 				TargetAttributes = {
 					166F76081DC1C6DE007BD9B7 = {
@@ -305,6 +308,7 @@
 			files = (
 				162478761DCCB26F0056B373 /* ColorDodgeBlendFilter.swift in Sources */,
 				162478701DCCAF410056B373 /* OverlayBlendFilter.swift in Sources */,
+				16CABF361E4AB9C500A723C2 /* CIVector.swift in Sources */,
 				166882631DC353EA00C67F0C /* LinearDodgeBlendFilter.swift in Sources */,
 				16ABF4131DCC939600DE3CED /* ScreenBlendFilter.swift in Sources */,
 				166F76901DC1D747007BD9B7 /* CIContext.swift in Sources */,
@@ -361,6 +365,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -414,6 +419,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
