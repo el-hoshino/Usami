@@ -11,45 +11,54 @@ import Eltaso
 
 public class ColorControlsFilter: CustomImageRetouchCIFilter {
 	
-	private let _colorControlsFilter = CIFilter(name: "CIColorControls")
+	private let inputColorControlsFilter: CIFilter = {
+		guard let filter = CIFilter(name: "CIColorControls") else {
+			fatalError("CIColorControls not exist")
+		}
+		return filter
+	}()
 	
-	private var _brightness: CGFloat = 0
-	public let brightnessRange: ClosedRange<CGFloat> = -1 ... 1
-	public var brightness: CGFloat {
+	private var defaultBrightness: CGFloat { return 0 }
+	private var defaultContrast: CGFloat { return 1 }
+	private var defaultSaturation: CGFloat { return 1 }
+	
+	private lazy var inputAdjustedBrightness: CGFloat = self.defaultBrightness
+	public let inputBrightnessRange: ClosedRange<CGFloat> = -1 ... 1
+	public var inputBrightness: CGFloat {
 		set {
-			self._brightness = newValue.limited(within: self.brightnessRange)
+			self.inputAdjustedBrightness = newValue.limited(within: self.inputBrightnessRange)
 		}
 		get {
-			return self._brightness
+			return self.inputAdjustedBrightness
 		}
 	}
-	private var _contrast: CGFloat = 1
-	public let contrastRange: ClosedRange<CGFloat> = 0 ... 4
-	public var contrast: CGFloat {
+	private lazy var inputAdjustedContrast: CGFloat = self.defaultContrast
+	public let inputContrastRange: ClosedRange<CGFloat> = 0 ... 4
+	public var inputContrast: CGFloat {
 		set {
-			self._contrast = newValue.limited(within: self.contrastRange)
+			self.inputAdjustedContrast = newValue.limited(within: self.inputContrastRange)
 		}
 		get {
-			return self._contrast
+			return self.inputAdjustedContrast
 		}
 	}
-	private var _saturation: CGFloat = 1
-	public let saturationRange: ClosedRange<CGFloat> = 0 ... 2
-	public var saturation: CGFloat {
+	private lazy var inputAdjustedSaturation: CGFloat = self.defaultSaturation
+	public let inputSaturationRange: ClosedRange<CGFloat> = 0 ... 2
+	public var inputSaturation: CGFloat {
 		set {
-			self._saturation = newValue.limited(within: self.saturationRange)
+			self.inputAdjustedSaturation = newValue.limited(within: self.inputSaturationRange)
 		}
 		get {
-			return self._saturation
+			return self.inputAdjustedSaturation
 		}
 	}
 	
 	override public func setDefaults() {
 		super.setDefaults()
-		self._colorControlsFilter?.setDefaults()
-		self.brightness = 0
-		self.contrast = 1
-		self.saturation = 1
+		self.inputColorControlsFilter.setDefaults()
+		self.inputAdjustedBrightness = self.defaultBrightness
+		self.inputAdjustedContrast = self.defaultContrast
+		self.inputAdjustedSaturation = self.defaultSaturation
 	}
 	
 	override public var outputImage: CIImage? {
@@ -58,13 +67,10 @@ public class ColorControlsFilter: CustomImageRetouchCIFilter {
 			return nil
 		}
 		
-		guard let colorControlsFilter = self._colorControlsFilter else {
-			return inputImage
-		}
-		
-		let brightness = self.brightness
-		let contrast = self.contrast
-		let saturation = self.saturation
+		let colorControlsFilter = self.inputColorControlsFilter
+		let brightness = self.inputAdjustedBrightness
+		let contrast = self.inputAdjustedContrast
+		let saturation = self.inputAdjustedSaturation
 		colorControlsFilter.setValue(inputImage, forKey: kCIInputImageKey)
 		colorControlsFilter.setValue(brightness, forKey: kCIInputBrightnessKey)
 		colorControlsFilter.setValue(contrast, forKey: kCIInputContrastKey)
