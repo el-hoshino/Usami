@@ -10,11 +10,16 @@ import CoreImage
 
 public class SepiaToneFilter: CustomImageRetouchCIFilter {
 	
-	private let _sepiaFilter = CIFilter(name: "CISepiaTone")
+	private let inputSepiaFilter: CIFilter = {
+		guard let filter = CIFilter(name: "CISepiaTone") else {
+			fatalError("CISepiaTone filter not exist")
+		}
+		return filter
+	}()
 	
 	public override func setDefaults() {
 		super.setDefaults()
-		self._sepiaFilter?.setDefaults()
+		self.inputSepiaFilter.setDefaults()
 	}
 	
 	public override var outputImage: CIImage? {
@@ -23,16 +28,13 @@ public class SepiaToneFilter: CustomImageRetouchCIFilter {
 			return nil
 		}
 		
-		let image: CIImage
-		if let filter = self._sepiaFilter {
-			filter.setValue(self.inputImage, forKey: kCIInputImageKey)
-			image = filter.outputImage ?? inputImage
-			
-		} else {
-			image = inputImage
+		let sepiaFilter = self.inputSepiaFilter
+		sepiaFilter.setValue(self.inputImage, forKey: kCIInputImageKey)
+		guard let sepiaTonedImage = sepiaFilter.outputImage else {
+			return inputImage
 		}
 		
-		return image
+		return sepiaTonedImage
 		
 	}
 	
