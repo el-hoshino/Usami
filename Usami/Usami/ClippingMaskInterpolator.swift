@@ -10,29 +10,31 @@ import CoreImage
 
 public class ClippingMaskInterpolator: CIFilter {
 	
-	private let _interpolator = CIFilter(name: "CIBlendWithAlphaMask")
+	private let inputInterpolator: CIFilter =  {
+		guard let filter = CIFilter(name: "CIBlendWithAlphaMask") else {
+			fatalError("CIBlendWithAlphaMask filter not exist")
+		}
+		return filter
+	}()
 	
-	public var upperImage: CIImage?
-	public var lowerImage: CIImage?
-	public var clippingMask: CIImage?
+	public var inputUpperImage: CIImage?
+	public var inputLowerImage: CIImage?
+	public var inputClippingMask: CIImage?
 	
 	override public func setDefaults() {
 		super.setDefaults()
-		self._interpolator?.setDefaults()
-		self.upperImage = nil
-		self.lowerImage = nil
-		self.clippingMask = nil
+		self.inputInterpolator.setDefaults()
+		self.inputUpperImage = nil
+		self.inputLowerImage = nil
+		self.inputClippingMask = nil
 	}
 	
 	override public var outputImage: CIImage? {
 		
-		guard let interplator = self._interpolator else {
-			return nil
-		}
-		
-		let upperImage = self.upperImage
-		let lowerImage = self.lowerImage
-		let clippingMask = self.clippingMask
+		let interplator = self.inputInterpolator
+		let upperImage = self.inputUpperImage
+		let lowerImage = self.inputLowerImage
+		let clippingMask = self.inputClippingMask
 		
 		interplator.setValue(upperImage, forKey: kCIInputImageKey)
 		interplator.setValue(lowerImage, forKey: kCIInputBackgroundImageKey)
