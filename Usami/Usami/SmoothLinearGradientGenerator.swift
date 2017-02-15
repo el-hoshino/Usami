@@ -10,7 +10,7 @@ import CoreImage
 
 public class SmoothLinearGradientGenerator: CIFilter {
 	
-	private let _generator: CIFilter = {
+	private let inputGenerator: CIFilter = {
 		guard let filter = CIFilter(name: "CISmoothLinearGradient") else {
 			fatalError("CISmoothLinearGradient filter not exist")
 		}
@@ -31,7 +31,7 @@ public class SmoothLinearGradientGenerator: CIFilter {
 	
 	override public func setDefaults() {
 		super.setDefaults()
-		self._generator.setDefaults()
+		self.inputGenerator.setDefaults()
 		self.inputExtent = self.defaultExtent
 		self.inputAPoint = self.defaultAPoint
 		self.inputAColor = self.defaultAColor
@@ -40,7 +40,7 @@ public class SmoothLinearGradientGenerator: CIFilter {
 	
 	override public var outputImage: CIImage? {
 		
-		let generator = self._generator
+		let generator = self.inputGenerator
 		let extent = self.inputExtent
 		let aPoint = self.inputAPoint
 		let aColor = self.inputAPoint

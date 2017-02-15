@@ -10,7 +10,7 @@ import CoreImage
 
 public class RadialGradientGenerator: CIFilter {
 	
-	private let _generator: CIFilter = {
+	private let inputGenerator: CIFilter = {
 		guard let filter = CIFilter(name: "CIRadialGradient") else {
 			fatalError("CIRadialGradient filter not exist")
 		}
@@ -33,7 +33,7 @@ public class RadialGradientGenerator: CIFilter {
 	
 	override public func setDefaults() {
 		super.setDefaults()
-		self._generator.setDefaults()
+		self.inputGenerator.setDefaults()
 		self.inputExtent = self.defaultExtent
 		self.inputRadialCenter = self.defaultRadialCenter
 		self.inputInnerRadius = self.defaultInnerRadius
@@ -44,7 +44,7 @@ public class RadialGradientGenerator: CIFilter {
 	
 	override public var outputImage: CIImage? {
 		
-		let generator = self._generator
+		let generator = self.inputGenerator
 		let extent = self.inputExtent
 		let radialCenter = self.inputRadialCenter
 		let innerRadius = self.inputInnerRadius
