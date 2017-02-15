@@ -10,6 +10,7 @@ import CoreImage
 
 extension CIFilter {
 	
+	@available(*, deprecated: 0.2.0, message: "CIFilter#getFilteredImage(from originalImage: UIImage?, in context: CIContext? = nil) is deprecated. Use CustomImageRetouchCIFilter#getRetouchedImage(from originalImage: UIImage?, in context: CIContext? = nil) instead.")
 	public func getFilteredImage(from originalImage: UIImage?, in context: CIContext? = nil) -> UIImage? {
 		
 		guard let originalImage = originalImage else {
