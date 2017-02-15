@@ -10,14 +10,19 @@ import CoreImage
 
 public class OverlayBlendFilter: CustomImageRetouchCIFilter {
 	
-	private let _overlayBlendFilter = CIFilter(name: "CIOverlayBlendMode")
+	private let inputOverlayBlendFilter: CIFilter = {
+		guard let filter = CIFilter(name: "CIOverlayBlendMode") else {
+			fatalError("CIOverlayBlendMode filter not exist")
+		}
+		return filter
+	}()
 	
-	public var blendingImage: CIImage?
+	public var inputBlendingImage: CIImage?
 	
 	public override func setDefaults() {
 		super.setDefaults()
-		self._overlayBlendFilter?.setDefaults()
-		self.blendingImage = nil
+		self.inputOverlayBlendFilter.setDefaults()
+		self.inputBlendingImage = nil
 	}
 	
 	public override var outputImage: CIImage? {
@@ -26,9 +31,11 @@ public class OverlayBlendFilter: CustomImageRetouchCIFilter {
 			return nil
 		}
 		
-		guard let blendingImage = self.blendingImage, let overlayBlendFilter = self._overlayBlendFilter else {
+		guard let blendingImage = self.inputBlendingImage else {
 			return inputImage
 		}
+		
+		let overlayBlendFilter = self.inputOverlayBlendFilter
 		overlayBlendFilter.setValue(inputImage, forKey: kCIInputBackgroundImageKey)
 		overlayBlendFilter.setValue(blendingImage, forKey: kCIInputImageKey)
 		guard let blendedImage = overlayBlendFilter.outputImage else {
