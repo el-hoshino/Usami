@@ -10,26 +10,32 @@ import CoreImage
 
 public class ColorMatrixFilter: CustomImageRetouchCIFilter {
 	
-	private let _colorMatrixFilter: CIFilter = {
+	private let inputColorMatrixFilter: CIFilter = {
 		guard let filter = CIFilter(name: "CIColorMatrix") else {
 			fatalError("CIColorMatrix filter not exist")
 		}
 		return filter
 	}()
 	
-	public var inputR = CIVector(x: 1, y: 0, z: 0, w: 0)
-	public var inputG = CIVector(x: 0, y: 1, z: 0, w: 0)
-	public var inputB = CIVector(x: 0, y: 0, z: 1, w: 0)
-	public var inputA = CIVector(x: 0, y: 0, z: 0, w: 1)
-	public var inputBias = CIVector(x: 0, y: 0, z: 0, w: 0)
+	private var defaultR: CIVector { return CIVector(x: 1, y: 0, z: 0, w: 0) }
+	private var defaultG: CIVector { return CIVector(x: 0, y: 1, z: 0, w: 0) }
+	private var defaultB: CIVector { return CIVector(x: 0, y: 0, z: 1, w: 0) }
+	private var defaultA: CIVector { return CIVector(x: 0, y: 0, z: 0, w: 1) }
+	private var defaultBias: CIVector { return CIVector(x: 0, y: 0, z: 0, w: 0) }
+	
+	public lazy var inputR: CIVector = self.defaultR
+	public lazy var inputG: CIVector = self.defaultG
+	public lazy var inputB: CIVector = self.defaultB
+	public lazy var inputA: CIVector = self.defaultA
+	public lazy var inputBias: CIVector = self.defaultBias
 	
 	public override func setDefaults() {
 		super.setDefaults()
-		self.inputR = CIVector(x: 1, y: 0, z: 0, w: 0)
-		self.inputG = CIVector(x: 0, y: 1, z: 0, w: 0)
-		self.inputB = CIVector(x: 0, y: 0, z: 1, w: 0)
-		self.inputA = CIVector(x: 0, y: 0, z: 0, w: 1)
-		self.inputBias = CIVector(x: 0, y: 0, z: 0, w: 0)
+		self.inputR = self.defaultR
+		self.inputG = self.defaultG
+		self.inputB = self.defaultB
+		self.inputA = self.defaultA
+		self.inputBias = self.defaultBias
 	}
 	
 	public override var outputImage: CIImage? {
@@ -38,7 +44,7 @@ public class ColorMatrixFilter: CustomImageRetouchCIFilter {
 			return nil
 		}
 		
-		let colorMatrixFilter = self._colorMatrixFilter
+		let colorMatrixFilter = self.inputColorMatrixFilter
 		let inputR = self.inputR
 		let inputG = self.inputG
 		let inputB = self.inputB
@@ -51,7 +57,6 @@ public class ColorMatrixFilter: CustomImageRetouchCIFilter {
 		colorMatrixFilter.setValue(inputB, forKey: "inputBVector")
 		colorMatrixFilter.setValue(inputA, forKey: "inputAVector")
 		colorMatrixFilter.setValue(inputBias, forKey: "inputBiasVector")
-		
 		guard let colorMatrixedImage = colorMatrixFilter.outputImage else {
 			return inputImage
 		}
