@@ -26,10 +26,6 @@ public class GaussianBlurFilter: CustomImageRetouchCIFilter {
 		self.setDefaults()
 	}
 	
-	deinit {
-		print("Gaussian deinit")
-	}
-	
 	public override func setDefaults() {
 		super.setDefaults()
 		self._affineClampFilter.setDefaults()
