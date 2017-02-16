@@ -54,7 +54,7 @@ extension CIFilter.CICategory {
 		public static func makeBoxBlur() -> CIFilter { return CIFilter(name: "CIBoxBlur")! }
 		public static func makeDiscBlur() -> CIFilter { return CIFilter(name: "CIDiscBlur")! }
 		public static func makeGaussianBlur() -> CIFilter { return CIFilter(name: "CIGaussianBlur")! }
-		public static func makeMaskedfunciableBlur() -> CIFilter { return CIFilter(name: "CIMaskedfunciableBlur")! }
+		public static func makeMaskedVariableBlur() -> CIFilter { return CIFilter(name: "CIMaskedVariableBlur")! }
 		public static func makeMedianFilter() -> CIFilter { return CIFilter(name: "CIMedianFilter")! }
 		public static func makeMotionBlur() -> CIFilter { return CIFilter(name: "CIMotionBlur")! }
 		public static func makeNoiseReduction() -> CIFilter { return CIFilter(name: "CINoiseReduction")! }
