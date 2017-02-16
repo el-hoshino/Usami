@@ -11,7 +11,12 @@ import Eltaso
 
 extension CIImage {
 	
+	@available(*, deprecated: 0.2.0, message: "CIImage.createImageWithExtent(_ extent: CGRect, andColor color: CIColor) is deprecated. Use CIImage.createImage(extent: CGRect, color: CIColor) instead.")
 	public static func createImageWithExtent(_ extent: CGRect, andColor color: CIColor) -> CIImage? {
+		return CIImage.createImage(extent: extent, color: color)
+	}
+	
+	public static func createImage(extent: CGRect, color: CIColor) -> CIImage? {
 		
 		guard let generator = CIFilter(name: "CIConstantColorGenerator") else {
 			return nil
@@ -24,7 +29,12 @@ extension CIImage {
 		
 	}
 	
+	@available(*, deprecated: 0.2.0, message: "CIImage.createRadialGradientImageWithExtent(_ extent: CGRect, ...) is deprecated. Use CIImage.createImage(extent: CGRect, ...) instead.")
 	public static func createRadialGradientImageWithExtent(_ extent: CGRect, circleCenter: CGPoint, innerRadius: CGFloat, innerColor: CIColor, outerRadius: CGFloat, outerColor: CIColor) -> CIImage? {
+		return CIImage.createImage(extent: extent, circleCenter: circleCenter, innerRadius: innerRadius, innerColor: innerColor, outerRadius: outerRadius, outerColor: outerColor)
+	}
+	
+	public static func createImage(extent: CGRect, circleCenter: CGPoint, innerRadius: CGFloat, innerColor: CIColor, outerRadius: CGFloat, outerColor: CIColor) -> CIImage? {
 		
 		let generator = RadialGradientGenerator()
 		
