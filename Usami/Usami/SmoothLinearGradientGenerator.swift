@@ -12,11 +12,11 @@ public class SmoothLinearGradientGenerator: CIFilter {
 	
 	private let _generator = CIFilter.CICategory.Gradient.makeSmoothLinearGradient()
 	
-	public var inputExtent: CIVector = CIVector(cgRect: .zero)
-	public var inputAPoint: CIVector = CIVector(cgPoint: CGPoint(x: 0, y: 0))
-	public var inputAColor: CIColor = CIColor(red: 1, green: 1, blue: 1)
-	public var inputBPoint: CIVector = CIVector(cgPoint: CGPoint(x: 0, y: 0))
-	public var inputBColor: CIColor = CIColor(red: 0, green: 0, blue: 0)
+	public var inputExtent: CIVector = .zero
+	public var inputAPoint: CIVector = .zero
+	public var inputAColor: CIColor = .white
+	public var inputBPoint: CIVector = .zero
+	public var inputBColor: CIColor = .black
 	
 	public override init() {
 		super.init()

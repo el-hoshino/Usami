@@ -12,12 +12,12 @@ public class RadialGradientGenerator: CIFilter {
 	
 	private let _generator = CIFilter.CICategory.Gradient.makeRadialGradient()
 	
-	public var inputExtent: CIVector = CIVector(cgRect: .zero)
-	public var inputRadialCenter: CIVector = CIVector(x: 0, y: 0)
+	public var inputExtent: CIVector = .zero
+	public var inputRadialCenter: CIVector = .zero
 	public var inputInnerRadius: CGFloat = 0
-	public var inputInnerColor: CIColor = CIColor(red: 1, green: 1, blue: 1)
+	public var inputInnerColor: CIColor = .white
 	public var inputOuterRadius: CGFloat = 0
-	public var inputOuterColor: CIColor = CIColor(red: 0, green: 0, blue: 0)
+	public var inputOuterColor: CIColor = .black
 	
 	public override init() {
 		super.init()
