@@ -10,32 +10,31 @@ import CoreImage
 
 public class ColorMatrixFilter: CustomImageRetouchCIFilter {
 	
-	private let inputColorMatrixFilter: CIFilter = {
-		guard let filter = CIFilter(name: "CIColorMatrix") else {
-			fatalError("CIColorMatrix filter not exist")
-		}
-		return filter
-	}()
+	private let _colorMatrix = CIFilter.CICategory.ColorAdjustment.makeColorMatrix()
 	
-	private var defaultR: CIVector { return CIVector(x: 1, y: 0, z: 0, w: 0) }
-	private var defaultG: CIVector { return CIVector(x: 0, y: 1, z: 0, w: 0) }
-	private var defaultB: CIVector { return CIVector(x: 0, y: 0, z: 1, w: 0) }
-	private var defaultA: CIVector { return CIVector(x: 0, y: 0, z: 0, w: 1) }
-	private var defaultBias: CIVector { return CIVector(x: 0, y: 0, z: 0, w: 0) }
+	public var inputR: CIVector = .zero
+	public var inputG: CIVector = .zero
+	public var inputB: CIVector = .zero
+	public var inputA: CIVector = .zero
+	public var inputBias: CIVector = .zero
 	
-	public lazy var inputR: CIVector = self.defaultR
-	public lazy var inputG: CIVector = self.defaultG
-	public lazy var inputB: CIVector = self.defaultB
-	public lazy var inputA: CIVector = self.defaultA
-	public lazy var inputBias: CIVector = self.defaultBias
+	public override init() {
+		super.init()
+		self.setDefaults()
+	}
+	
+	required public init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		self.setDefaults()
+	}
 	
 	public override func setDefaults() {
 		super.setDefaults()
-		self.inputR = self.defaultR
-		self.inputG = self.defaultG
-		self.inputB = self.defaultB
-		self.inputA = self.defaultA
-		self.inputBias = self.defaultBias
+		self.inputR = CIVector(x: 1, y: 0, z: 0, w: 0)
+		self.inputG = CIVector(x: 0, y: 1, z: 0, w: 0)
+		self.inputB = CIVector(x: 0, y: 0, z: 1, w: 0)
+		self.inputA = CIVector(x: 0, y: 0, z: 0, w: 1)
+		self.inputBias = CIVector(x: 0, y: 0, z: 0, w: 0)
 	}
 	
 	public override var outputImage: CIImage? {
@@ -44,7 +43,7 @@ public class ColorMatrixFilter: CustomImageRetouchCIFilter {
 			return nil
 		}
 		
-		let colorMatrixFilter = self.inputColorMatrixFilter
+		let colorMatrixFilter = self._colorMatrix
 		let inputR = self.inputR
 		let inputG = self.inputG
 		let inputB = self.inputB
