@@ -28,12 +28,12 @@ extension CIImage {
 		
 		let generator = RadialGradientGenerator()
 		
-		generator.extent = extent
-		generator.radialCenter = CIVector(cgPoint: circleCenter)
-		generator.innerRadius = innerRadius
-		generator.innerColor = innerColor
-		generator.outerRadius = outerRadius
-		generator.outerColor = outerColor
+		generator.inputExtent = CIVector(cgRect: extent)
+		generator.inputRadialCenter = CIVector(cgPoint: circleCenter)
+		generator.inputInnerRadius = innerRadius
+		generator.inputInnerColor = innerColor
+		generator.inputOuterRadius = outerRadius
+		generator.inputOuterColor = outerColor
 		let generatedImage = generator.outputImage
 		
 		return generatedImage

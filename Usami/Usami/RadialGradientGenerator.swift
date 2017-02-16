@@ -10,37 +10,45 @@ import CoreImage
 
 public class RadialGradientGenerator: CIFilter {
 	
-	private let _generator = CIFilter(name: "CIRadialGradient")
+	private let _generator = CIFilter.CICategory.Gradient.makeRadialGradient()
 	
-	public var extent: CGRect? = nil
-	public var radialCenter: CIVector = CIVector(x: 0, y: 0)
-	public var innerRadius: CGFloat = 0
-	public var innerColor: CIColor = CIColor(red: 1, green: 1, blue: 1, alpha: 1)
-	public var outerRadius: CGFloat = 0
-	public var outerColor: CIColor = CIColor(red: 0, green: 0, blue: 0, alpha: 0)
+	public var inputExtent: CIVector = .zero
+	public var inputRadialCenter: CIVector = .zero
+	public var inputInnerRadius: CGFloat = 0
+	public var inputInnerColor: CIColor = .white
+	public var inputOuterRadius: CGFloat = 0
+	public var inputOuterColor: CIColor = .black
+	
+	public override init() {
+		super.init()
+		self.setDefaults()
+	}
+	
+	required public init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		self.setDefaults()
+	}
 	
 	override public func setDefaults() {
 		super.setDefaults()
-		self._generator?.setDefaults()
-		self.extent = nil
-		self.radialCenter = CIVector(x: 0, y: 0)
-		self.innerRadius = 0
-		self.innerColor = CIColor(red: 1, green: 1, blue: 1, alpha: 1)
-		self.outerRadius = 0
-		self.outerColor = CIColor(red: 0, green: 0, blue: 0, alpha: 0)
+		self._generator.setDefaults()
+		self.inputExtent = CIVector(cgRect: .zero)
+		self.inputRadialCenter = CIVector(x: 0, y: 0)
+		self.inputInnerRadius = 0
+		self.inputInnerColor = CIColor(red: 1, green: 1, blue: 1)
+		self.inputOuterRadius = 0
+		self.inputOuterColor = CIColor(red: 0, green: 0, blue: 0)
 	}
 	
 	override public var outputImage: CIImage? {
 		
-		guard let generator = self._generator else {
-			return nil
-		}
-		
-		let radialCenter = self.radialCenter
-		let innerRadius = self.innerRadius
-		let innerColor = self.innerColor
-		let outerRadius = self.outerRadius
-		let outerColor = self.outerColor
+		let generator = self._generator
+		let extent = self.inputExtent
+		let radialCenter = self.inputRadialCenter
+		let innerRadius = self.inputInnerRadius
+		let innerColor = self.inputInnerColor
+		let outerRadius = self.inputOuterRadius
+		let outerColor = self.inputOuterColor
 		
 		generator.setValue(radialCenter, forKey: kCIInputCenterKey)
 		generator.setValue(innerRadius, forKey: "inputRadius0")
@@ -48,12 +56,9 @@ public class RadialGradientGenerator: CIFilter {
 		generator.setValue(innerColor, forKey: "inputColor0")
 		generator.setValue(outerColor, forKey: "inputColor1")
 		
-		let outputImage = generator.outputImage
-		if let extent = self.extent {
-			return outputImage?.cropping(to: extent)
-		} else {
-			return outputImage
-		}
+		let generatedImage = generator.outputImage
+		let outputImage = generatedImage?.cropping(to: extent.cgRectValue)
+		return outputImage
 		
 	}
 	
