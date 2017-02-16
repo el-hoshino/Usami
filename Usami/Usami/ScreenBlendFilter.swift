@@ -10,18 +10,13 @@ import CoreImage
 
 public class ScreenBlendFilter: CustomImageRetouchCIFilter {
 	
-	private let inputScreenBlendFilter: CIFilter = {
-		guard let filter = CIFilter(name: "CIScreenBlendMode") else {
-			fatalError("CIScreenBlendMode filter not exist")
-		}
-		return filter
-	}()
+	private let _screenBlendFilter = CIFilter.CICategory.CompositeOperation.makeScreenBlendMode()
 	
 	public var inputBlendingImage: CIImage?
 	
 	public override func setDefaults() {
 		super.setDefaults()
-		self.inputScreenBlendFilter.setDefaults()
+		self._screenBlendFilter.setDefaults()
 		self.inputBlendingImage = nil
 	}
 	
@@ -35,7 +30,7 @@ public class ScreenBlendFilter: CustomImageRetouchCIFilter {
 			return inputImage
 		}
 		
-		let screenBlendFilter = self.inputScreenBlendFilter
+		let screenBlendFilter = self._screenBlendFilter
 		screenBlendFilter.setValue(inputImage, forKey: kCIInputBackgroundImageKey)
 		screenBlendFilter.setValue(blendingImage, forKey: kCIInputImageKey)
 		guard let blendedImage = screenBlendFilter.outputImage else {
