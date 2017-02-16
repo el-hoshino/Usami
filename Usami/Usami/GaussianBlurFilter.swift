@@ -10,34 +10,32 @@ import CoreImage
 
 public class GaussianBlurFilter: CustomImageRetouchCIFilter {
 	
-	private let inputAffineClampFilter: CIFilter = {
-		guard let filter = CIFilter(name: "CIAffineClamp") else {
-			fatalError("CIAffineClamp filter not exist")
-		}
-		return filter
-	}()
-	private let inputGaussianBlurFilter: CIFilter = {
-		guard let filter = CIFilter(name: "CIGaussianBlur") else {
-			fatalError("CIGaussianBlur filter not exist")
-		}
-		return filter
-	}()
-	private let inputCropFilter: CIFilter = {
-		guard let filter = CIFilter(name: "CICrop") else {
-			fatalError("CICrop filter not exist")
-		}
-		return filter
-	}()
+	private let _affineClampFilter = CIFilter.CICategory.TileEffect.makeAffineClamp()
+	private let _gaussianBlurFilter = CIFilter.CICategory.Blur.makeGaussianBlur()
+	private let _cropFilter = CIFilter.CICategory.GeometryAdjustment.makeCrop()
 	
-	private var defaultRadius: CGFloat { return 10 }
-	public lazy var inputRadius: CGFloat = self.defaultRadius
+	public var inputRadius: CGFloat = 0
+	
+	public override init() {
+		super.init()
+		self.setDefaults()
+	}
+	
+	required public init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		self.setDefaults()
+	}
+	
+	deinit {
+		print("Gaussian deinit")
+	}
 	
 	public override func setDefaults() {
 		super.setDefaults()
-		self.inputAffineClampFilter.setDefaults()
-		self.inputGaussianBlurFilter.setDefaults()
-		self.inputCropFilter.setDefaults()
-		self.inputRadius = self.defaultRadius
+		self._affineClampFilter.setDefaults()
+		self._gaussianBlurFilter.setDefaults()
+		self._cropFilter.setDefaults()
+		self.inputRadius = 10
 	}
 	
 	public override var outputImage: CIImage? {
@@ -46,7 +44,7 @@ public class GaussianBlurFilter: CustomImageRetouchCIFilter {
 			return nil
 		}
 		
-		let affineClampFilter = self.inputAffineClampFilter
+		let affineClampFilter = self._affineClampFilter
 		let transform = CGAffineTransform(scaleX: 1, y: 1)
 		affineClampFilter.setValue(inputImage, forKey: kCIInputImageKey)
 		affineClampFilter.setValue(transform, forKey: kCIInputTransformKey)
@@ -54,7 +52,7 @@ public class GaussianBlurFilter: CustomImageRetouchCIFilter {
 			return inputImage
 		}
 		
-		let gaussianBlurFilter = self.inputGaussianBlurFilter
+		let gaussianBlurFilter = self._gaussianBlurFilter
 		let radius = self.inputRadius
 		gaussianBlurFilter.setValue(affineClampedImage, forKey: kCIInputImageKey)
 		gaussianBlurFilter.setValue(radius, forKey: kCIInputRadiusKey)
@@ -62,7 +60,7 @@ public class GaussianBlurFilter: CustomImageRetouchCIFilter {
 			return affineClampedImage.cropping(to: inputImage.extent)
 		}
 		
-		let cropFilter = self.inputCropFilter
+		let cropFilter = self._cropFilter
 		let originalRect = inputImage.extent
 		cropFilter.setValue(blurredImage, forKey: kCIInputImageKey)
 		cropFilter.setValue(originalRect, forKey: "inputRectangle")
