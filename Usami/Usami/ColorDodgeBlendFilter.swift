@@ -10,18 +10,13 @@ import CoreImage
 
 public class ColorDodgeBlendFilter: CustomImageRetouchCIFilter {
 	
-	private let inputColorDodgeBlendFilter: CIFilter = {
-		guard let filter = CIFilter(name: "CIColorDodgeBlendMode") else {
-			fatalError("CIColorDodgeBlendMode filter not exist")
-		}
-		return filter
-	}()
+	private let _colorDodgeBlendFilter = CIFilter.CICategory.CompositeOperation.makeColorDodgeBlendMode()
 	
 	public var inputBlendingImage: CIImage?
 	
 	public override func setDefaults() {
 		super.setDefaults()
-		self.inputColorDodgeBlendFilter.setDefaults()
+		self._colorDodgeBlendFilter.setDefaults()
 		self.inputBlendingImage = nil
 	}
 	
@@ -35,7 +30,7 @@ public class ColorDodgeBlendFilter: CustomImageRetouchCIFilter {
 			return inputImage
 		}
 		
-		let colorDodgeBlendFilter = self.inputColorDodgeBlendFilter
+		let colorDodgeBlendFilter = self._colorDodgeBlendFilter
 		colorDodgeBlendFilter.setValue(inputImage, forKey: kCIInputBackgroundImageKey)
 		colorDodgeBlendFilter.setValue(blendingImage, forKey: kCIInputImageKey)
 		guard let blendedImage = colorDodgeBlendFilter.outputImage else {
