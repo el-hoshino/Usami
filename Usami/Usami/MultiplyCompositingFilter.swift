@@ -10,18 +10,13 @@ import CoreImage
 
 public class MultiplyCompositingFilter: CustomImageRetouchCIFilter {
 	
-	private let inputMultiplyCompositingFilter: CIFilter = {
-		guard let filter = CIFilter(name: "CIMultiplyCompositing") else {
-			fatalError("CIMultiplyCompositing filter not exist")
-		}
-		return filter
-	}()
+	private let _multiplyCompositingFilter = CIFilter.CICategory.CompositeOperation.makeMultiplyCompositing()
 	
 	public var inputCompositingImage: CIImage?
 	
 	public override func setDefaults() {
 		super.setDefaults()
-		self.inputMultiplyCompositingFilter.setDefaults()
+		self._multiplyCompositingFilter.setDefaults()
 		self.inputCompositingImage = nil
 	}
 	
@@ -35,7 +30,7 @@ public class MultiplyCompositingFilter: CustomImageRetouchCIFilter {
 			return inputImage
 		}
 		
-		let multiplyCompositingFilter = self.inputMultiplyCompositingFilter
+		let multiplyCompositingFilter = self._multiplyCompositingFilter
 		multiplyCompositingFilter.setValue(inputImage, forKey: kCIInputBackgroundImageKey)
 		multiplyCompositingFilter.setValue(compositingImage, forKey: kCIInputImageKey)
 		guard let compositedImage = multiplyCompositingFilter.outputImage else {
