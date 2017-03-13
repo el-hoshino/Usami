@@ -11,7 +11,6 @@
 		162478761DCCB26F0056B373 /* ColorDodgeBlendFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162478751DCCB26F0056B373 /* ColorDodgeBlendFilter.swift */; };
 		163405BF1DDC53E5003BEF8E /* RadialGradientGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163405BE1DDC53E5003BEF8E /* RadialGradientGenerator.swift */; };
 		16470A551DC35B8E00EF0E77 /* ColorControlsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */; };
-		16470A6A1DC364C200EF0E77 /* Eltaso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16470A671DC364BC00EF0E77 /* Eltaso.framework */; };
 		16470A6C1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */; };
 		16470A721DC6EEAC00EF0E77 /* MaskedBlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A711DC6EEAC00EF0E77 /* MaskedBlurFilter.swift */; };
 		16470A761DC6F70700EF0E77 /* CIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16470A751DC6F70700EF0E77 /* CIColor.swift */; };
@@ -28,26 +27,13 @@
 		166F767C1DC1CE5D007BD9B7 /* SepiaToneFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F767B1DC1CE5D007BD9B7 /* SepiaToneFilter.swift */; };
 		166F767E1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F767D1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift */; };
 		166F76901DC1D747007BD9B7 /* CIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F768F1DC1D747007BD9B7 /* CIContext.swift */; };
+		168911DD1E76AD4600E398B8 /* Eltaso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168911DC1E76AD4600E398B8 /* Eltaso.framework */; };
 		16ABF4131DCC939600DE3CED /* ScreenBlendFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4121DCC939600DE3CED /* ScreenBlendFilter.swift */; };
 		16ABF4171DCC97CF00DE3CED /* SourceOverCompositingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4161DCC97CF00DE3CED /* SourceOverCompositingFilter.swift */; };
 		16CABF361E4AB9C500A723C2 /* CIVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CABF351E4AB9C500A723C2 /* CIVector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		16470A661DC364BC00EF0E77 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 16470A611DC364BC00EF0E77 /* Eltaso.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 79E14E821D2B90DA00AF6EE4;
-			remoteInfo = Eltaso;
-		};
-		16470A681DC364BC00EF0E77 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 16470A611DC364BC00EF0E77 /* Eltaso.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 79E14E8C1D2B90DA00AF6EE4;
-			remoteInfo = EltasoTests;
-		};
 		166F76141DC1C6DE007BD9B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 166F76001DC1C6DE007BD9B7 /* Project object */;
@@ -62,7 +48,6 @@
 		162478751DCCB26F0056B373 /* ColorDodgeBlendFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDodgeBlendFilter.swift; sourceTree = "<group>"; };
 		163405BE1DDC53E5003BEF8E /* RadialGradientGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGradientGenerator.swift; sourceTree = "<group>"; };
 		16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorControlsFilter.swift; sourceTree = "<group>"; };
-		16470A611DC364BC00EF0E77 /* Eltaso.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eltaso.xcodeproj; path = "/Users/shi_xiangxin/Documents/MAGES./作品/AfiliaCamera/../Eltaso/Eltaso/Eltaso.xcodeproj"; sourceTree = "<absolute>"; };
 		16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplyCompositingFilter.swift; sourceTree = "<group>"; };
 		16470A711DC6EEAC00EF0E77 /* MaskedBlurFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskedBlurFilter.swift; sourceTree = "<group>"; };
 		16470A751DC6F70700EF0E77 /* CIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIColor.swift; sourceTree = "<group>"; };
@@ -82,6 +67,7 @@
 		166F767B1DC1CE5D007BD9B7 /* SepiaToneFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SepiaToneFilter.swift; sourceTree = "<group>"; };
 		166F767D1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaussianBlurFilter.swift; sourceTree = "<group>"; };
 		166F768F1DC1D747007BD9B7 /* CIContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIContext.swift; sourceTree = "<group>"; };
+		168911DC1E76AD4600E398B8 /* Eltaso.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eltaso.framework; path = ../Carthage/Build/iOS/Eltaso.framework; sourceTree = "<group>"; };
 		16ABF4121DCC939600DE3CED /* ScreenBlendFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenBlendFilter.swift; sourceTree = "<group>"; };
 		16ABF4161DCC97CF00DE3CED /* SourceOverCompositingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceOverCompositingFilter.swift; sourceTree = "<group>"; };
 		16CABF351E4AB9C500A723C2 /* CIVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIVector.swift; sourceTree = "<group>"; };
@@ -92,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16470A6A1DC364C200EF0E77 /* Eltaso.framework in Frameworks */,
+				168911DD1E76AD4600E398B8 /* Eltaso.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,22 +93,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16470A621DC364BC00EF0E77 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				16470A671DC364BC00EF0E77 /* Eltaso.framework */,
-				16470A691DC364BC00EF0E77 /* EltasoTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		166F75FF1DC1C6DE007BD9B7 = {
 			isa = PBXGroup;
 			children = (
-				16470A611DC364BC00EF0E77 /* Eltaso.xcodeproj */,
 				166F760B1DC1C6DE007BD9B7 /* Usami */,
 				166F76161DC1C6DE007BD9B7 /* UsamiTests */,
 				166F760A1DC1C6DE007BD9B7 /* Products */,
+				168911DB1E76AD4600E398B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +150,14 @@
 			path = UsamiTests;
 			sourceTree = "<group>";
 		};
+		168911DB1E76AD4600E398B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				168911DC1E76AD4600E398B8 /* Eltaso.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -195,6 +180,7 @@
 				166F76051DC1C6DE007BD9B7 /* Frameworks */,
 				166F76061DC1C6DE007BD9B7 /* Headers */,
 				166F76071DC1C6DE007BD9B7 /* Resources */,
+				168911DE1E76AD5100E398B8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -256,12 +242,6 @@
 			mainGroup = 166F75FF1DC1C6DE007BD9B7;
 			productRefGroup = 166F760A1DC1C6DE007BD9B7 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 16470A621DC364BC00EF0E77 /* Products */;
-					ProjectRef = 16470A611DC364BC00EF0E77 /* Eltaso.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				166F76081DC1C6DE007BD9B7 /* Usami */,
@@ -269,23 +249,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		16470A671DC364BC00EF0E77 /* Eltaso.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Eltaso.framework;
-			remoteRef = 16470A661DC364BC00EF0E77 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		16470A691DC364BC00EF0E77 /* EltasoTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = EltasoTests.xctest;
-			remoteRef = 16470A681DC364BC00EF0E77 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		166F76071DC1C6DE007BD9B7 /* Resources */ = {
@@ -303,6 +266,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		168911DE1E76AD5100E398B8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../Carthage/Build/iOS/Eltaso.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		166F76041DC1C6DE007BD9B7 /* Sources */ = {
@@ -379,6 +359,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/Eltaso.framework";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -433,6 +414,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/Eltaso.framework";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -462,6 +444,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = Usami/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -484,6 +467,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = Usami/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
