@@ -1,5 +1,5 @@
 //
-//  ColorDodgeBlendFilter.swift
+//  ScreenBlendModeFilter.swift
 //  Usami
 //
 //  Created by 史　翔新 on 2016/11/04.
@@ -8,15 +8,15 @@
 
 import CoreImage
 
-public class ColorDodgeBlendFilter: CustomImageRetouchCIFilter {
+public class ScreenBlendModeFilter: CustomImageRetouchCIFilter {
 	
-	private let _colorDodgeBlendFilter = CIFilter.CICategory.CompositeOperation.makeColorDodgeBlendMode()
+	private let _screenBlendModeFilter = CIFilter.CICategory.CompositeOperation.makeScreenBlendMode()
 	
 	public var inputBlendingImage: CIImage?
 	
 	public override func setDefaults() {
 		super.setDefaults()
-		self._colorDodgeBlendFilter.setDefaults()
+		self._screenBlendModeFilter.setDefaults()
 		self.inputBlendingImage = nil
 	}
 	
@@ -30,10 +30,10 @@ public class ColorDodgeBlendFilter: CustomImageRetouchCIFilter {
 			return inputImage
 		}
 		
-		let colorDodgeBlendFilter = self._colorDodgeBlendFilter
-		colorDodgeBlendFilter.setValue(inputImage, forKey: kCIInputBackgroundImageKey)
-		colorDodgeBlendFilter.setValue(blendingImage, forKey: kCIInputImageKey)
-		guard let blendedImage = colorDodgeBlendFilter.outputImage else {
+		let screenBlendModeFilter = self._screenBlendModeFilter
+		screenBlendModeFilter.setValue(inputImage, forKey: kCIInputBackgroundImageKey)
+		screenBlendModeFilter.setValue(blendingImage, forKey: kCIInputImageKey)
+		guard let blendedImage = screenBlendModeFilter.outputImage else {
 			return inputImage
 		}
 		

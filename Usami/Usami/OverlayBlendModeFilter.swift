@@ -1,5 +1,5 @@
 //
-//  ScreenBlendFilter.swift
+//  OverlayBlendModeFilter.swift
 //  Usami
 //
 //  Created by 史　翔新 on 2016/11/04.
@@ -8,15 +8,15 @@
 
 import CoreImage
 
-public class ScreenBlendFilter: CustomImageRetouchCIFilter {
+public class OverlayBlendModeFilter: CustomImageRetouchCIFilter {
 	
-	private let _screenBlendFilter = CIFilter.CICategory.CompositeOperation.makeScreenBlendMode()
+	private let _overlayBlendModeFilter = CIFilter.CICategory.CompositeOperation.makeOverlayBlendMode()
 	
 	public var inputBlendingImage: CIImage?
 	
 	public override func setDefaults() {
 		super.setDefaults()
-		self._screenBlendFilter.setDefaults()
+		self._overlayBlendModeFilter.setDefaults()
 		self.inputBlendingImage = nil
 	}
 	
@@ -30,10 +30,10 @@ public class ScreenBlendFilter: CustomImageRetouchCIFilter {
 			return inputImage
 		}
 		
-		let screenBlendFilter = self._screenBlendFilter
-		screenBlendFilter.setValue(inputImage, forKey: kCIInputBackgroundImageKey)
-		screenBlendFilter.setValue(blendingImage, forKey: kCIInputImageKey)
-		guard let blendedImage = screenBlendFilter.outputImage else {
+		let overlayBlendModeFilter = self._overlayBlendModeFilter
+		overlayBlendModeFilter.setValue(inputImage, forKey: kCIInputBackgroundImageKey)
+		overlayBlendModeFilter.setValue(blendingImage, forKey: kCIInputImageKey)
+		guard let blendedImage = overlayBlendModeFilter.outputImage else {
 			return inputImage
 		}
 		
