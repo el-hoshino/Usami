@@ -10,14 +10,14 @@ import CoreImage
 
 public class SourceOverCompositingFilter: CustomImageRetouchCIFilter {
 	
-	private let _sourceOverCompositingFilter = CIFilter(name: "CISourceOverCompositing")
+	private let _ourceOverCompositingFilter = CIFilter.CICategory.CompositeOperation.makeSourceOverCompositing()
 	
-	public var compositingImage: CIImage?
+	public var inputCompositingImage: CIImage?
 	
 	public override func setDefaults() {
 		super.setDefaults()
-		self._sourceOverCompositingFilter?.setDefaults()
-		self.compositingImage = nil
+		self._ourceOverCompositingFilter.setDefaults()
+		self.inputCompositingImage = nil
 	}
 	
 	public override var outputImage: CIImage? {
@@ -26,9 +26,11 @@ public class SourceOverCompositingFilter: CustomImageRetouchCIFilter {
 			return nil
 		}
 		
-		guard let compositingImage = self.compositingImage, let sourceOverCompositingFilter = self._sourceOverCompositingFilter else {
+		guard let compositingImage = self.inputCompositingImage else {
 			return inputImage
 		}
+		
+		let sourceOverCompositingFilter = self._ourceOverCompositingFilter
 		sourceOverCompositingFilter.setValue(inputImage, forKey: kCIInputBackgroundImageKey)
 		sourceOverCompositingFilter.setValue(compositingImage, forKey: kCIInputImageKey)
 		guard let compositedImage = sourceOverCompositingFilter.outputImage else {

@@ -10,20 +10,30 @@ import CoreImage
 
 public class MaskedBlurFilter: CustomImageRetouchCIFilter {
 	
-	private let _affineClampFilter = CIFilter(name: "CIAffineClamp")
-	private let _maskedVariableBlurFilter = CIFilter(name: "CIMaskedVariableBlur")
-	private let _cropFilter = CIFilter(name: "CICrop")
+	private let _affineClampFilter = CIFilter.CICategory.TileEffect.makeAffineClamp()
+	private let _maskedVariableBlurFilter = CIFilter.CICategory.Blur.makeMaskedVariableBlur()
+	private let _cropFilter = CIFilter.CICategory.GeometryAdjustment.makeCrop()
 	
-	public var radius: CGFloat = 10
-	public var maskImage: CIImage?
+	public var inputRadius: CGFloat = 0
+	public var inputMaskImage: CIImage?
+	
+	public override init() {
+		super.init()
+		self.setDefaults()
+	}
+	
+	required public init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		self.setDefaults()
+	}
 	
 	public override func setDefaults() {
 		super.setDefaults()
-		self._affineClampFilter?.setDefaults()
-		self._maskedVariableBlurFilter?.setDefaults()
-		self._cropFilter?.setDefaults()
-		self.radius = 10
-		self.maskImage = nil
+		self._affineClampFilter.setDefaults()
+		self._maskedVariableBlurFilter.setDefaults()
+		self._cropFilter.setDefaults()
+		self.inputRadius = 10
+		self.inputMaskImage = nil
 	}
 	
 	public override var outputImage: CIImage? {
@@ -32,9 +42,7 @@ public class MaskedBlurFilter: CustomImageRetouchCIFilter {
 			return nil
 		}
 		
-		guard let affineClampFilter = self._affineClampFilter else {
-			return inputImage
-		}
+		let affineClampFilter = self._affineClampFilter
 		let transform = CGAffineTransform(scaleX: 1, y: 1)
 		affineClampFilter.setValue(inputImage, forKey: kCIInputImageKey)
 		affineClampFilter.setValue(transform, forKey: kCIInputTransformKey)
@@ -42,11 +50,9 @@ public class MaskedBlurFilter: CustomImageRetouchCIFilter {
 			return inputImage
 		}
 		
-		guard let maskedVariableBlurFilter = self._maskedVariableBlurFilter else {
-			return affineClampedImage.cropping(to: inputImage.extent)
-		}
-		let maskImage = self.maskImage
-		let radius = self.radius
+		let maskedVariableBlurFilter = self._maskedVariableBlurFilter
+		let maskImage = self.inputMaskImage
+		let radius = self.inputRadius
 		maskedVariableBlurFilter.setValue(affineClampedImage, forKey: kCIInputImageKey)
 		maskedVariableBlurFilter.setValue(maskImage, forKey: "inputMask")
 		maskedVariableBlurFilter.setValue(radius, forKey: kCIInputRadiusKey)
@@ -54,9 +60,7 @@ public class MaskedBlurFilter: CustomImageRetouchCIFilter {
 			return affineClampedImage.cropping(to: inputImage.extent)
 		}
 		
-		guard let cropFilter = self._cropFilter else {
-			return blurredImage.cropping(to: inputImage.extent)
-		}
+		let cropFilter = self._cropFilter
 		let originalRect = inputImage.extent
 		cropFilter.setValue(blurredImage, forKey: kCIInputImageKey)
 		cropFilter.setValue(originalRect, forKey: "inputRectangle")

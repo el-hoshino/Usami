@@ -10,48 +10,52 @@ import CoreImage
 
 public class SmoothLinearGradientGenerator: CIFilter {
 	
-	private let _generator = CIFilter(name: "CISmoothLinearGradient")
+	private let _generator = CIFilter.CICategory.Gradient.makeSmoothLinearGradient()
 	
-	public var extent: CGRect? = nil
-	public var aPoint: CIVector = CIVector(x: 0, y: 0)
-	public var aColor: CIColor = CIColor(red: 1, green: 1, blue: 1, alpha: 1)
-	public var bPoint: CIVector = CIVector(x: 0, y: 0)
-	public var bColor: CIColor = CIColor(red: 0, green: 0, blue: 0, alpha: 0)
+	public var inputExtent: CIVector = .zero
+	public var inputAPoint: CIVector = .zero
+	public var inputAColor: CIColor = .white
+	public var inputBPoint: CIVector = .zero
+	public var inputBColor: CIColor = .black
+	
+	public override init() {
+		super.init()
+		self.setDefaults()
+	}
+	
+	required public init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		self.setDefaults()
+	}
 	
 	override public func setDefaults() {
 		super.setDefaults()
-		self._generator?.setDefaults()
-		self.extent = nil
-		self.aPoint = CIVector(x: 0, y: 0)
-		self.aColor = CIColor(red: 1, green: 1, blue: 1, alpha: 1)
-		self.bPoint = CIVector(x: 0, y: 0)
-		self.bColor = CIColor(red: 0, green: 0, blue: 0, alpha: 0)
+		self._generator.setDefaults()
+		self.inputExtent = CIVector(cgRect: .zero)
+		self.inputAPoint = CIVector(cgPoint: CGPoint(x: 0, y: 0))
+		self.inputAColor = CIColor(red: 1, green: 1, blue: 1)
+		self.inputBPoint = CIVector(cgPoint: CGPoint(x: 0, y: 0))
+		self.inputBColor = CIColor(red: 0, green: 0, blue: 0)
 	}
 	
 	override public var outputImage: CIImage? {
 		
-		guard let generator = self._generator else {
-			return nil
-		}
-		
-		let aPoint = self.aPoint
-		let aColor = self.aColor
-		let bPoint = self.bPoint
-		let bColor = self.bColor
+		let generator = self._generator
+		let extent = self.inputExtent
+		let aPoint = self.inputAPoint
+		let aColor = self.inputAColor
+		let bPoint = self.inputBPoint
+		let bColor = self.inputBColor
 		
 		generator.setValue(aPoint, forKey: "inputPoint0")
 		generator.setValue(aColor, forKey: "inputColor0")
 		generator.setValue(bPoint, forKey: "inputPoint1")
 		generator.setValue(bColor, forKey: "inputColor1")
 		
-		let outputImage = generator.outputImage
-		if let extent = self.extent {
-			return outputImage?.cropping(to: extent)
-		} else {
-			return outputImage
-		}
+		let generatedImage = generator.outputImage
+		let outputImage = generatedImage?.cropping(to: extent.cgRectValue)
+		return outputImage
 		
 	}
-
 	
 }

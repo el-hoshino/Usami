@@ -23,5 +23,34 @@ open class CustomImageRetouchCIFilter: CIFilter {
 		
 	}
 	
+}
+
+extension CustomImageRetouchCIFilter {
+	
+	public func getRetouchedImage(from originalImage: UIImage?, in context: CIContext? = nil) -> UIImage? {
+		
+		guard let originalImage = originalImage else {
+			return nil
+		}
+		
+		guard let originalCIImage = originalImage.ciImage ?? CIImage(image: originalImage) else {
+			return originalImage
+		}
+		
+		self.inputImage = originalCIImage
+		
+		guard let outputCIImage = self.outputImage else {
+			return originalImage
+		}
+		
+		if let context = context, let outputImage = context.createImage(outputCIImage, from: outputCIImage.extent) {
+			return outputImage
+			
+		} else {
+			return UIImage(ciImage: outputCIImage)
+			
+		}
+		
+	}
 	
 }

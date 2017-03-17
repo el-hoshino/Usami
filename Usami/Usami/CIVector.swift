@@ -15,3 +15,11 @@ extension CIVector {
 	}
 	
 }
+
+extension CIVector {
+	
+	public static var zero: CIVector {
+		return CIVector(x: 0, y: 0, z: 0, w: 0)
+	}
+	
+}

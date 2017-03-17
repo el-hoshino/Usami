@@ -11,7 +11,12 @@ import Eltaso
 
 extension CIImage {
 	
+	@available(*, deprecated: 0.2.0, message: "CIImage.createImageWithExtent(_ extent: CGRect, andColor color: CIColor) is deprecated. Use CIImage.createImage(extent: CGRect, color: CIColor) instead.")
 	public static func createImageWithExtent(_ extent: CGRect, andColor color: CIColor) -> CIImage? {
+		return CIImage.createImage(extent: extent, color: color)
+	}
+	
+	public static func createImage(extent: CGRect, color: CIColor) -> CIImage? {
 		
 		guard let generator = CIFilter(name: "CIConstantColorGenerator") else {
 			return nil
@@ -24,16 +29,21 @@ extension CIImage {
 		
 	}
 	
+	@available(*, deprecated: 0.2.0, message: "CIImage.createRadialGradientImageWithExtent(_ extent: CGRect, ...) is deprecated. Use CIImage.createImage(extent: CGRect, ...) instead.")
 	public static func createRadialGradientImageWithExtent(_ extent: CGRect, circleCenter: CGPoint, innerRadius: CGFloat, innerColor: CIColor, outerRadius: CGFloat, outerColor: CIColor) -> CIImage? {
+		return CIImage.createImage(extent: extent, circleCenter: circleCenter, innerRadius: innerRadius, innerColor: innerColor, outerRadius: outerRadius, outerColor: outerColor)
+	}
+	
+	public static func createImage(extent: CGRect, circleCenter: CGPoint, innerRadius: CGFloat, innerColor: CIColor, outerRadius: CGFloat, outerColor: CIColor) -> CIImage? {
 		
 		let generator = RadialGradientGenerator()
 		
-		generator.extent = extent
-		generator.radialCenter = CIVector(cgPoint: circleCenter)
-		generator.innerRadius = innerRadius
-		generator.innerColor = innerColor
-		generator.outerRadius = outerRadius
-		generator.outerColor = outerColor
+		generator.inputExtent = CIVector(cgRect: extent)
+		generator.inputRadialCenter = CIVector(cgPoint: circleCenter)
+		generator.inputInnerRadius = innerRadius
+		generator.inputInnerColor = innerColor
+		generator.inputOuterRadius = outerRadius
+		generator.inputOuterColor = outerColor
 		let generatedImage = generator.outputImage
 		
 		return generatedImage
