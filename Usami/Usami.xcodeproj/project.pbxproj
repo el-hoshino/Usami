@@ -29,6 +29,7 @@
 		166F767E1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F767D1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift */; };
 		166F76901DC1D747007BD9B7 /* CIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F768F1DC1D747007BD9B7 /* CIContext.swift */; };
 		16833EEC1E780F8200BA8B98 /* HardLightBlendModeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16833EEB1E780F8200BA8B98 /* HardLightBlendModeFilter.swift */; };
+		1684840B1E7A9FDE004010C0 /* AdditionCompositingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684840A1E7A9FDE004010C0 /* AdditionCompositingFilter.swift */; };
 		168911DD1E76AD4600E398B8 /* Eltaso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168911DC1E76AD4600E398B8 /* Eltaso.framework */; };
 		16ABF4131DCC939600DE3CED /* ScreenBlendModeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4121DCC939600DE3CED /* ScreenBlendModeFilter.swift */; };
 		16ABF4171DCC97CF00DE3CED /* SourceOverCompositingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4161DCC97CF00DE3CED /* SourceOverCompositingFilter.swift */; };
@@ -71,6 +72,7 @@
 		166F767D1DC1CE9D007BD9B7 /* GaussianBlurFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaussianBlurFilter.swift; sourceTree = "<group>"; };
 		166F768F1DC1D747007BD9B7 /* CIContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIContext.swift; sourceTree = "<group>"; };
 		16833EEB1E780F8200BA8B98 /* HardLightBlendModeFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HardLightBlendModeFilter.swift; sourceTree = "<group>"; };
+		1684840A1E7A9FDE004010C0 /* AdditionCompositingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionCompositingFilter.swift; sourceTree = "<group>"; };
 		168911DC1E76AD4600E398B8 /* Eltaso.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eltaso.framework; path = ../Carthage/Build/iOS/Eltaso.framework; sourceTree = "<group>"; };
 		16ABF4121DCC939600DE3CED /* ScreenBlendModeFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenBlendModeFilter.swift; sourceTree = "<group>"; };
 		16ABF4161DCC97CF00DE3CED /* SourceOverCompositingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceOverCompositingFilter.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				166F76791DC1CD7A007BD9B7 /* CustomImageRetouchCIFilter.swift */,
 				16470A541DC35B8E00EF0E77 /* ColorControlsFilter.swift */,
 				16518DB21E54723400C236FE /* ColorMatrixFilter.swift */,
+				1684840A1E7A9FDE004010C0 /* AdditionCompositingFilter.swift */,
 				16470A6B1DC6EA5400EF0E77 /* MultiplyCompositingFilter.swift */,
 				16ABF4161DCC97CF00DE3CED /* SourceOverCompositingFilter.swift */,
 				1624786F1DCCAF410056B373 /* OverlayBlendModeFilter.swift */,
@@ -311,6 +314,7 @@
 				16518DB31E54723400C236FE /* ColorMatrixFilter.swift in Sources */,
 				164866AC1DDDAD36001B067E /* SmoothLinearGradientGenerator.swift in Sources */,
 				163405BF1DDC53E5003BEF8E /* RadialGradientGenerator.swift in Sources */,
+				1684840B1E7A9FDE004010C0 /* AdditionCompositingFilter.swift in Sources */,
 				16470A551DC35B8E00EF0E77 /* ColorControlsFilter.swift in Sources */,
 				166D84071E7A484C00156596 /* MultiplyBlendModeFilter.swift in Sources */,
 				166882691DC3549B00C67F0C /* CIImage.swift in Sources */,
