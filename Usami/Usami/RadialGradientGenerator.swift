@@ -57,7 +57,7 @@ public class RadialGradientGenerator: CIFilter {
 		generator.setValue(outerColor, forKey: "inputColor1")
 		
 		let generatedImage = generator.outputImage
-		let outputImage = generatedImage?.cropping(to: extent.cgRectValue)
+		let outputImage = generatedImage?.cropped(to: extent.cgRectValue)
 		return outputImage
 		
 	}

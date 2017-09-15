@@ -53,7 +53,7 @@ public class GaussianBlurFilter: CustomImageRetouchCIFilter {
 		gaussianBlurFilter.setValue(affineClampedImage, forKey: kCIInputImageKey)
 		gaussianBlurFilter.setValue(radius, forKey: kCIInputRadiusKey)
 		guard let blurredImage = gaussianBlurFilter.outputImage else {
-			return affineClampedImage.cropping(to: inputImage.extent)
+			return affineClampedImage.cropped(to: inputImage.extent)
 		}
 		
 		let cropFilter = self._cropFilter
@@ -61,7 +61,7 @@ public class GaussianBlurFilter: CustomImageRetouchCIFilter {
 		cropFilter.setValue(blurredImage, forKey: kCIInputImageKey)
 		cropFilter.setValue(originalRect, forKey: "inputRectangle")
 		guard let croppedImage = cropFilter.outputImage else {
-			return blurredImage.cropping(to: inputImage.extent)
+			return blurredImage.cropped(to: inputImage.extent)
 		}
 		
 		return croppedImage

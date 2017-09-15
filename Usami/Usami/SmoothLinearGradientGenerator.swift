@@ -53,7 +53,7 @@ public class SmoothLinearGradientGenerator: CIFilter {
 		generator.setValue(bColor, forKey: "inputColor1")
 		
 		let generatedImage = generator.outputImage
-		let outputImage = generatedImage?.cropping(to: extent.cgRectValue)
+		let outputImage = generatedImage?.cropped(to: extent.cgRectValue)
 		return outputImage
 		
 	}

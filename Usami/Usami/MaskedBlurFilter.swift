@@ -57,7 +57,7 @@ public class MaskedBlurFilter: CustomImageRetouchCIFilter {
 		maskedVariableBlurFilter.setValue(maskImage, forKey: "inputMask")
 		maskedVariableBlurFilter.setValue(radius, forKey: kCIInputRadiusKey)
 		guard let blurredImage = maskedVariableBlurFilter.outputImage else {
-			return affineClampedImage.cropping(to: inputImage.extent)
+			return affineClampedImage.cropped(to: inputImage.extent)
 		}
 		
 		let cropFilter = self._cropFilter
@@ -65,7 +65,7 @@ public class MaskedBlurFilter: CustomImageRetouchCIFilter {
 		cropFilter.setValue(blurredImage, forKey: kCIInputImageKey)
 		cropFilter.setValue(originalRect, forKey: "inputRectangle")
 		guard let croppedImage = cropFilter.outputImage else {
-			return blurredImage.cropping(to: inputImage.extent)
+			return blurredImage.cropped(to: inputImage.extent)
 		}
 		
 		return croppedImage

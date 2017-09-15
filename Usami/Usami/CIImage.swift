@@ -23,7 +23,7 @@ extension CIImage {
 		}
 		
 		generator.setValue(color, forKey: kCIInputColorKey)
-		let croppedImage = generator.outputImage?.cropping(to: extent)
+		let croppedImage = generator.outputImage?.cropped(to: extent)
 		
 		return croppedImage
 		
@@ -57,7 +57,7 @@ extension CIImage {
 	public func translating(by translation: CGPoint) -> CIImage {
 		
 		let transform = CGAffineTransform(translationX: translation.x, y: translation.y)
-		let transformedImage = self.applying(transform)
+		let transformedImage = self.transformed(by: transform)
 		return transformedImage
 		
 	}
@@ -65,7 +65,7 @@ extension CIImage {
 	public func scaling(by scale: CGScale) -> CIImage {
 		
 		let transform = CGAffineTransform(scaleX: scale.horizontal, y: scale.vertical)
-		let transformedImage = self.applying(transform)
+		let transformedImage = self.transformed(by: transform)
 		return transformedImage
 		
 	}
@@ -73,7 +73,7 @@ extension CIImage {
 	public func rotating(by angle: CGFloat) -> CIImage {
 		
 		let transform = CGAffineTransform(rotationAngle: angle)
-		let transformedImage = self.applying(transform)
+		let transformedImage = self.transformed(by: transform)
 		return transformedImage
 		
 	}
