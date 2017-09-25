@@ -7,7 +7,6 @@
 //
 
 import CoreImage
-import Eltaso
 
 public class ColorControlsFilter: CustomImageRetouchCIFilter {
 	

@@ -7,7 +7,6 @@
 //
 
 import CoreImage
-import Eltaso
 
 extension CIImage {
 	
