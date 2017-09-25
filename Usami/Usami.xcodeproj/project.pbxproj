@@ -80,7 +80,6 @@
 		1681E7301F6BCA7C00A69B7D /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		16833EEB1E780F8200BA8B98 /* HardLightBlendModeFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HardLightBlendModeFilter.swift; sourceTree = "<group>"; };
 		1684840A1E7A9FDE004010C0 /* AdditionCompositingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionCompositingFilter.swift; sourceTree = "<group>"; };
-		168911DC1E76AD4600E398B8 /* Eltaso.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eltaso.framework; path = ../Carthage/Build/iOS/Eltaso.framework; sourceTree = "<group>"; };
 		16ABF4121DCC939600DE3CED /* ScreenBlendModeFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenBlendModeFilter.swift; sourceTree = "<group>"; };
 		16ABF4161DCC97CF00DE3CED /* SourceOverCompositingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceOverCompositingFilter.swift; sourceTree = "<group>"; };
 		16CABF351E4AB9C500A723C2 /* CIVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIVector.swift; sourceTree = "<group>"; };
@@ -172,7 +171,6 @@
 		168911DB1E76AD4600E398B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				168911DC1E76AD4600E398B8 /* Eltaso.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
